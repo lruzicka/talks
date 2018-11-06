@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{Co je modularita?}{3}{0}{1}
-\beamer@sectionintoc {2}{Spr\IeC {\'a}va software a modularita}{6}{0}{2}
-\beamer@sectionintoc {3}{Pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } modul\IeC {\'a}rn\IeC {\'\i }ho obsahu}{14}{0}{3}
