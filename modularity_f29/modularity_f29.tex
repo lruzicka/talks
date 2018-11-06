@@ -32,14 +32,14 @@
 \frametitle{Co je vlastně modularita?}
 
 \begin{itemize}
-	\item nový plán na poskytování aplikací
+	\item nový způsob poskytování software
 	\item řeší problémy tradiční distribuce software
-	\item větší přizpůsobení se uživatelským potřebám
+	\item umožňuje větší přizpůsobení se uživatelským potřebám
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Co musíte vědět o Modularitě?}
+\frametitle{Co je třeba vědět o Modularitě?}
 
 \begin{itemize}
 	\item poskytuje větší flexibilitu v distribuci aplikací
@@ -47,16 +47,16 @@
 	\item má vždy přednost před běžnými repozitáři
 	\item neumožňuje instalaci více verzí jedné aplikace na jednom stroji
 	\item neřeší (pokud vím) závislosti dalších aplikací
-	\item jestliže nejsou dostupná modulární repa, systém o modularitě neví a při operacích s balíčky může dojít k~nečekaným překvapením 
+	\item jestliže nejsou dostupná modulární repozitáře, systém o modularitě neví, a při operacích s balíčky může dojít k~nečekaným překvapením 
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Modularita pro všechny}
-Do \textbf{Fedory 29} přichází globální podpora pro modularitu, kterou jsme zatím mohli potkat pouze ve \textbf{Fedora Server 28}. 
+Do \textbf{Fedory 29} přichází globální podpora pro modularitu, která byla zatím dostupná pouze pro \textbf{Fedora Server 28}. 
 
-Nyní ve verzi 29, modularita:
+Nyní, ve verzi 29:
 
 \vspace{5pt}
 
@@ -158,10 +158,6 @@ Moduly lze také přeložit oproti dalším modulům a tak je možné vyřešit 
 	\item fedora-updates-modular.repo
 	\item fedora-updates-testing-modular.repo
 \end{enumerate}
-
-\begin{center}
-	\includegraphics[width=9cm]{repos}
-\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -295,7 +291,7 @@ V budoucnu bude mít každý modul definován svůj základní \textit{stream} a
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Jak vypnout Modularitu pomocí konfiguračních souborů?}
+\frametitle{Jak vypnete Modularitu pomocí konfiguračních souborů?}
 
 \begin{enumerate}
 	\item Najděte konfigurační soubory modulárních repozitářů.
@@ -311,7 +307,7 @@ V budoucnu bude mít každý modul definován svůj základní \textit{stream} a
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Jak vypnout Modularitu pomocí DNF?}
+\frametitle{Jak vypnete Modularitu pomocí DNF?}
 
 \begin{enumerate}
 	\item Zobrazte si dostupné povolené repozitáře.
