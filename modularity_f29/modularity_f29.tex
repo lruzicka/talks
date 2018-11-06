@@ -26,6 +26,32 @@
 	\maketitle
 \end{frame}
 
+\section{Co je modularita?}
+
+\begin{frame}
+\frametitle{Co je vlastně modularita?}
+
+\begin{itemize}
+	\item nový plán na poskytování aplikací
+	\item řeší problémy tradiční distribuce software
+	\item větší přizpůsobení se uživatelským potřebám
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Co musíte vědět o Modularitě?}
+
+\begin{itemize}
+	\item poskytuje větší flexibilitu v distribuci aplikací
+	\item umožňuje řešit nové uživatelské případy
+	\item má vždy přednost před běžnými repozitáři
+	\item neumožňuje instalaci více verzí jedné aplikace na jednom stroji
+	\item neřeší (pokud vím) závislosti dalších aplikací
+	\item jestliže nejsou dostupná modulární repa, systém o modularitě neví a při operacích s balíčky může dojít k~nečekaným překvapením 
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}
 \frametitle{Modularita pro všechny}
 Do \textbf{Fedory 29} přichází globální podpora pro modularitu, kterou jsme zatím mohli potkat pouze ve \textbf{Fedora Server 28}. 
@@ -34,35 +60,12 @@ Nyní ve verzi 29, modularita:
 
 \vspace{5pt}
 
-\begin{enumerate}
+\begin{itemize}
 	\item je zapnutá napříč spiny
 	\item není pro použití Fedory klíčová
 	\item pokrývá pouze malé spektrum aplikací (cca 30)
 	\item je rámcově funkční
-\end{enumerate}	
-\end{frame}
-
-
-\section{Co je modularita?}
-
-\begin{frame}
-\frametitle{Co je vlastně modularita?}
-
-
-\begin{itemize}
-	\item nový plán na poskytování aplikací
-	\item řeší problémy tradiční distribuce software
-	\item větší přizpůsobení se uživatelským potřebám
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Přehled modulárního OS}
-
-\begin{center}
-	\includegraphics[width=10cm]{overview}
-\end{center}
+\end{itemize}	
 \end{frame}
 
 \begin{frame}
@@ -93,6 +96,14 @@ V tradičním pojetí se balíčky vytvářejí z jedné verze zdrojových kód�
 V \textit{modulárním} pojetí se balíčky vytvářejí z jedné verze zdrojových kódů pro různé verze Fedory. Jednotlivé verze balíčků mohou být dostupné v několika verzích Fedory.
 \begin{center}
 	\includegraphics[width=10cm]{modular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Přehled modulárního OS}
+
+\begin{center}
+	\includegraphics[width=10cm]{overview}
 \end{center}
 \end{frame}
 
@@ -275,19 +286,6 @@ V budoucnu bude mít každý modul definován svůj základní \textit{stream} a
 	\item \tc|dnf install nodejs| nainstaluje RPM balíček \tc|nodejs| ze základního streamu.
 	\item \tc|dnf module install nodejs| nainstaluje základní profil a stream.
 	\item \tc|dnf module install nodejs:9| nainstaluje základní profil ze streamu \tc|9|.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Co musíte vědět o Modularitě?}
-
-\begin{itemize}
-	\item poskytuje větší flexibilitu v distribuci aplikací
-	\item umožňuje řešit nové uživatelské případy
-	\item má vždy přednost před běžnými repozitáři
-	\item neumožňuje instalaci více verzí jedné aplikace na jednom stroji
-	\item neřeší (pokud vím) závislosti dalších aplikací
-	\item jestliže nejsou dostupná modulární repa, systém o modularitě neví a při operacích s balíčky může dojít k~nečekaným překvapením 
 \end{itemize}
 \end{frame}
 
