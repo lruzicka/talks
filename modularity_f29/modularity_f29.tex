@@ -4,12 +4,12 @@
 \usepackage{lmodern}
 \usetheme{Malmoe}
 %\usetheme{Warsaw}
-
-\newcommand{\tc}[1]{
-	\textcolor{blue}{#1}
-}
-
 \usepackage{graphicx}
+\usepackage{newverbs}
+
+\newverbcommand{\tc}{\color{blue}}{}
+
+
 
 \begin{document}
 	\author{Lukáš Růžicka}
@@ -17,7 +17,7 @@
 	\subtitle{}
 	\titlegraphic{\includegraphics[width=3cm]{logo.png}}
 	\logo{\includegraphics[width=1cm]{logo.png}}
-	\institute{Fedora 29 Release}
+	\institute{Fedora 29 Release Party}
 	\date{listopad 2018}
 	\subject{Fedora 29}
 	%\setbeamercovered{transparent}
@@ -36,7 +36,7 @@ Nyní ve verzi 29, modularita:
 
 \begin{enumerate}
 	\item je zapnutá napříč spiny
-	\item je zatím dobrovolná
+	\item není pro použití Fedory klíčová
 	\item pokrývá pouze malé spektrum aplikací (cca 30)
 	\item je rámcově funkční
 \end{enumerate}	
@@ -153,12 +153,13 @@ Moduly lze také přeložit oproti dalším modulům a tak je možné vyřešit 
 \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Modulární repozitáře ve Fedoře 29}
 
 \begin{enumerate}
-	\item umístění v \textcolor{blue}{\texttt{/etc/yum.repos.d/}}
-	\item standartně povolené
+	\item standardně zapnuté pro všechny
+	\item není třeba nic víc řešit
+ 	\item umístění v \tc|/etc/yum.repos.d/|, pokud někdo chce měnit jejich nastavení
 \end{enumerate}
 \end{frame}
 
@@ -183,34 +184,168 @@ K používání modulárního obsahu existuje několik operací:
 \end{enumerate}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Zobrazení seznamu dostupných modulů}
 
 Zobrazení seznamu všech dostupných modulů:
 
 \begin{center}
-	\tc{\texttt{dnf module list}}
+	\tc|dnf module list|
 \end{center}
 
 Informace o konkrétním modulu:
 
 \begin{center}
-	\tc{\texttt{dnf module list <modulename>}}
+	\tc|dnf module list <modulename>|
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Další možnosti zobrazení}
+
+Moduly si lze také zobrazit podle jejich stavu. Každý modul může být buď:
+
+\begin{itemize}
+	\item zakázaný (\tc|--disabled|)
+	\item povolený (\tc|--enabled|)
+	\item nainstalovaný (\tc|--installed|)
+\end{itemize}
+
+Přepínače uvedené v závorkách jsou přepínače příkazu \tc|dnf module list|.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Informace o modulu}
+Ve výpisu je pro každý modul uvedeno:
+
+\begin{itemize}
+	\item název -- většinou jméno projektu (\tc|mariadb|)
+	\item stream -- verze projektu (\tc|10.1|)
+	\item profil -- sada balíčků (\tc|client, server, default|)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Povolení modulu}
+Povolení modulu umožní správci balíčků, aby s tímto modulem pracoval. 
+
+Následující příkaz povolí modul \tc|perl| ve verzi \tc|5.26|:
+
+\begin{center}
+	\tc|dnf module enable perl:5.26|
+\end{center}
+
+Takto povolený modul lze pak instalovat jako běžný balíček, tedy \tc|dnf install perl|.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Zakázání modulu}
+Zakázaný modul bude správce balíčků ignorovat. 
+
+Následující příkaz zakáže modul \tc|perl| ve verzi \tc|5.26|:
+
+\begin{center}
+	\tc|dnf module disable perl:5.26|
+\end{center}
+
+\tc|dnf install perl| tak nainstaluje verzi jazyka \tc|perl|, která se nachází ve standardním repozitáři, pokud nebude povolen jiný \textit{stream} téhož modulu.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Instalace modulu}
+
+\begin{itemize}
+	\item Modul lze instalovat i explicitním příkazem.
+	\item Není potřeba jej předem povolovat, povolí se během instalace.
+	\item Takto je možné zvolit si nejen konkrétní \textit{stream}, ale také \textit{profil} modulu.
+\end{itemize}
+
+\begin{center}
+	\tc|dnf module install mariadb:10.1/client|
+\end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Přednastavené hodnoty (default stream a profil)}
+
+V budoucnu bude mít každý modul definován svůj základní \textit{stream} a \textit{profil}. Práce s moduly by měla být ještě pohodlnější. Funkčnost by měla odpovídat následujícímu:
+
+\begin{itemize}
+	\item \tc|dnf install nodejs| nainstaluje RPM balíček \tc|nodejs| ze základního streamu.
+	\item \tc|dnf module install nodejs| nainstaluje základní profil a stream.
+	\item \tc|dnf module install nodejs:9| nainstaluje základní profil ze streamu \tc|9|.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Co musíte vědět o Modularitě?}
+
+\begin{itemize}
+	\item poskytuje větší flexibilitu v distribuci aplikací
+	\item umožňuje řešit nové uživatelské případy
+	\item má vždy přednost před běžnými repozitáři
+	\item neumožňuje instalaci více verzí jedné aplikace na jednom stroji
+	\item neřeší (pokud vím) závislosti dalších aplikací
+	\item jestliže nejsou dostupná modulární repa, systém o modularitě neví a při operacích s balíčky může dojít k~nečekaným překvapením 
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Jak vypnout Modularitu pomocí konfiguračních souborů?}
+
+\begin{enumerate}
+	\item Najděte konfigurační soubory modulárních repozitářů.
+	
+	\tc|ls /etc/yum.repos.d/*modular*|
+	\item Otevřete jeden z nalezených souborů.
+	
+	\tc|vi /etc/yum.repos.d/fedora-modular.repo|
+	\item V základní sekci (zde \tc|[fedora-modular]|) najděte položku \tc|enabled=1|.
+	\item Změňte její hodnotu na \tc|enabled=0|.
+	\item Zopakujte postup pro všechny repozitáře, které chcete zakázat.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Jak vypnout Modularitu pomocí DNF?}
+
+\begin{enumerate}
+	\item Zobrazte si dostupné povolené repozitáře.
+	
+	\tc|dnf repolist --enabled|
+	\item Ze seznamu si vyberte nějaký modulární repozitář (v~názvu je slovo \textit{modular}), např. \tc|fedora-modular|.
+	\item Zakažte tento repozitář.
+	
+	\tc|dnf config-manager --set-disabled fedora-modular|
+	\item Zopakujte postup pro všechny repozitáře, které chcete zakázat.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Více informací}
+	Dokumentace o současném stavu se nachází na \tc|https://docs.fedoraproject.org/en-US/modularity/|.
+	
+	Odsud jsem si vypůjčil diagramy.
+\end{frame}
+
+\begin{frame}
+\frametitle{Otázky a odpovědi}
+
+Ptejte se, protože
+
+\begin{center}
+	\Huge{Líná huba, holé neštěstí.}
 \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Další možnosti zobrazení}
-
-Zobrazení seznamu všech dostupných modulů:
-
+\frametitle{Díky za pozornost}
 \begin{center}
-	\tc{\texttt{dnf module list -\,-enabled}}
-	
-	\tc{\texttt{dnf module list -\,-disabled}}
-	
-	\tc{\texttt{dnf module list -\,-installed}}	
+	\Huge{a užijte si Fedoru 29!}
 \end{center}
 \end{frame}
+
+
 
 \end{document}
