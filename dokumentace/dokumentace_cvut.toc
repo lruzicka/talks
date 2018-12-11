@@ -1,7 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {czech}
-\beamer@sectionintoc {1}{Pro\IeC {\v c} ps\IeC {\'a}t dokumentaci?}{2}{0}{1}
-\beamer@sectionintoc {2}{Druhy dokumentace}{7}{0}{2}
-\beamer@sectionintoc {3}{Jak ps\IeC {\'a}t?}{13}{0}{3}
-\beamer@sectionintoc {4}{V \IeC {\v c}em ps\IeC {\'a}t?}{17}{0}{4}
-\beamer@sectionintoc {5}{Praxe}{30}{0}{5}

@@ -5,10 +5,10 @@
 \usetheme{Warsaw}
 \usecolortheme{seagull}
 
-\title{Červená nitka vede od Mínotaura}
-\subtitle{aneb Dokumentace jako vodítko po labyrintu života.}
+\title{Co když zmáčknu to červené tlačítko?}
+\subtitle{aneb Jak neodpálit jadernou bombu.}
 \author{Lukáš Růžička (lruzicka@redhat.com)}
-\date{16. dubna 2018, FIT ČVUT Praha}
+\date{12. prosince 2018, FIT ČVUT Praha}
 
 \begin{document}
 	\maketitle
@@ -74,7 +74,7 @@
 		
 		\begin{itemize}
 			\item Co je počítačová síť a jak se po ní posílají datagramy?
-			\item Co jsou optické vlastnosti objektivu a jak ovlivňují výsledné foto?
+			\item Co jsou optické vlastnosti objektivu a jak ovlivňují výslednou fotografii?
 			\item Jak funguje útok \textit{hrubou silou} a proč je důležité volit si komplikovaná přístupová hesla?
 			\item Jak působí bakterie zubního plaku a jak zvolit správný kartáček?
 		\end{itemize}
@@ -157,7 +157,7 @@
 	\section{V čem psát?}
 
 	\begin{frame}{Technické zpracování}
-	Dokumentaci můžeme psát ve spoustě různých formátů. Záleží, co přesně od dokumentace očekáváme. Můžeme si vybrat na základě následujících kritérií:
+	Dokumentaci můžeme psát ve spoustě různých formátů. Záleží, co přesně od dokumentace očekáváme:
 	\begin{itemize}
 		\item obtížnosti tvorby dokumentace (WYSIWYG, markdown, markup, \ldots{})
 		\item metod zobrazení (web, čtečka, tištěné médium, audiovizuální metody)
@@ -165,8 +165,20 @@
 		\item možností publikace (ručně, automaticky (CI))
 		\item dostupnosti metadat textu (sémantický markup)
 	\end{itemize}
-	V podstatě platí, že čím více muziky čekáme, tím více do dokumentace budeme muset investovat.
+
 	\end{frame}
+
+	  \begin{frame}{Docs As Code}
+S dokumentací zacházíme jako s kódem a používáme:
+\begin{enumerate}
+	\item popisovací jazyk (Markdown, AsciiDoc, \LaTeX, Docbook)
+	\item sdílený repozitář (Gitlab, Github)
+	\item správu verzí (Git, SVN)
+	\item kontinuální integraci (CI)
+	\item automatické publikování (web)
+\end{enumerate}
+\end{frame}
+
 
 	\begin{frame}{Formáty}
 	Pokud se v souvislosti s dokumentací mluví o formátech, pak máme na mysli v podstatě dva typy a to:
@@ -201,7 +213,7 @@
 			\item reST (Python)
 			\item Mallard (Gnome)
 			\item \TeX, \LaTeX
-			\item DocBook (SuSE, Red Hat, IBM)
+			\item DocBook (SuSE, IBM)
 		\end{itemize}
 	\end{frame}
 
@@ -218,7 +230,7 @@
 		\item nejasné hranice mezi prvky
 		\item významy některých značek kolidují s reálnými znaky (*)
 	\end{itemize}				
-	Markdown je vhodný především pro malé projekty, například README na Githubu.
+	Markdown je vhodný především pro malé projekty, například \textbf{github.io}.
 	\end{frame}
 
 	\begin{frame}{AsciiDoc}
@@ -235,7 +247,7 @@
 		\item sémantika zvyšuje složitost a omezuje čtivost
 		\item kolidující značky
 	\end{itemize}				
-	AsciiDoc je vhodný pro malé i velké projekty, ale v základu postrádá některé funkce, které jiné formáty nabízejí.
+	AsciiDoc je vhodný pro malé i větší projekty, pokud se spokojíme s omezenými možnostmi.
 	\end{frame}
     
 	\begin{frame}{reST a Sphinx}
@@ -300,7 +312,7 @@
 		\item vyžaduje čas na naučení
 		\item neodpouští chyby
 	\end{itemize}				
-	Docbook je pravděpodobně nejlepší volbou pro psaní korporátní dokumentace.
+	Docbook je pravděpodobně nejkomplexnější volbou pro psaní dokumentace.
 	\end{frame}
 
 	\begin{frame}{Výběr vhodného formátu}
@@ -319,11 +331,6 @@
 	Obecně platí, že \textbf{čím složitější} formát, tím \textbf{více možností použití}.
 	\end{frame}
 
-	  \begin{frame}{Úkol pro vás}
-			Jaký formát byste vyzkoušeli jako první, kdybyste si měli vybrat na základě poskytnutých informací? Proč?
-	  \end{frame}
-
-
 	\section{Praxe}	
 
 	\begin{frame}{Obvyklý postup při vytváření dokumentace}
@@ -341,10 +348,11 @@
 	\end{frame}
 
 \begin{frame}{Dokumentace v Red Hatu obsahově}
-Red Hat v současné době udržuje několik dokumentačních projektů. Organizační struktura dokumentačního oddělení používá tři oddělené pozice:
+Red Hat v současné době udržuje několik dokumentačních projektů. Organizační struktura dokumentačního oddělení má několik pozic:
 
 \begin{itemize}
 	\item obsahový stratég (content strategist)
+	\item technický manažer (technical manager)
 	\item programový manažer (document program manager)
 	\item dokumentátor (technical writer)
 \end{itemize}
@@ -354,32 +362,15 @@ Každý z nich je zodpovědný za jinou oblast vývoje dokumentace, leč jejich 
 
 
 	\begin{frame}{Dokumentace v Red Hatu technicky}
-		Z hlediska technického zpracování se používají dva postupy, které jsou založené buď na:
-		
+		V současné době se pro většinu dokumentačních projektů v Red Hatu používá 
 		\begin{itemize}
-			\item Docbooku
-			\item AsciiDocu
-		\end{itemize}
-	
-		Docbook je v současné době na ústupu a projekty přecházejí na AsciiDoc.
+			\item modulární přístup
+			\item AsciiDoc
+		\end{itemize}.
+		
 	\end{frame}
 
-	\begin{frame}{Pracovní postup v Docbooku}
-	Při vytváření dokumentace psané v Docbooku se postupuje takto:
-
-	\begin{itemize}
-		\item klonování Git repozitáře
-		\item ruční úprava dokumentů v textových editorech
-		\item sledování změn v paralelní Git větvi (branch)
-		\item validace a překlad na lokálním stroji (publican)
-		\item peer review $\longrightarrow$ kontrola kvality
-		\item automatizované testy obsahu (překlepy, názvy)
-		\item merge do hlavní větve
-		\item překlad hlavní větve (publican) a vystavení na portálu (www.redhat.com)
-	\end{itemize}
-	\end{frame}
-
-	\begin{frame}{Pracovní postup v AsciiDocu}
+	\begin{frame}{Pracovní postup}
 	Při vytváření dokumentace psané v AsciiDocu se postupuje takto:
 
 	\begin{itemize}
@@ -387,25 +378,40 @@ Každý z nich je zodpovědný za jinou oblast vývoje dokumentace, leč jejich 
 		\item ruční úprava dokumentů v textových editorech
 		\item sledování změn v paralelní Git větvi (branch)
 		\item validace a překlad na lokálním stroji (asciidoctor, ccutil)
-		\item peer review $\longrightarrow$ kontrola kvality
-		\item merge do hlavní větve
+		\item \textbf{peer review} $\longrightarrow$ kontrola kvality
+		\item \textbf{merge} do hlavní větve
 		\item překlad hlavní větve (ccutil $\longrightarrow$ publican) a vystavení na portále
 	\end{itemize}
 	\end{frame}
 
 	\begin{frame}{Probíhající diskuse o dokumentaci}
-	V dokumentačním týmu v současné době probíhá několik diskusí a iniciativ o tom, jak dělat věci lépe, aby zákazník dostal za svoje peníze co nejlepší službu. 
+	V dokumentačním týmu v minulosti proběhlo několik celofiremních diskusí a iniciativ o tom, jak dělat věci lépe, aby zákazník dostal za svoje peníze co nejlepší službu. 
 	
 	\begin{itemize}
-		\item spolupráce upstream $\longleftrightarrow$ downstream
+		\item spolupráce upstream $\longleftrightarrow$ downstream (upstream first)
 		\item konzistentní terminologie (IBM Style Guide)
-		\item Docbook versus AsciiDoc
-		\item správný postup u peer review
-		\item jednotný způsob zápisu značek u AsciiDocu
-		\item sémantický zápis značek v AsciiDocu
-		\item modulární dokumentace
+		\item Docbook versus AsciiDoc (AsciiDoc)
+		\item správný postup u peer review (definice postupu)
+		\item jednotný způsob zápisu značek u AsciiDocu (doporučený způsob)
+		\item sémantický zápis značek v AsciiDocu (zatím se neujalo)
+		\item modulární dokumentace (objevují se problémy)
 	\end{itemize}
 	\end{frame}
+
+	\begin{frame}{Dokumentace pro Fedoru}
+\textbf{Fedora} je komunitní distribuce Linuxu, na jejímž vývoji se může podílet kdokoliv. Tak i na její dokumentaci.
+
+	\begin{itemize}
+		\item repozitáře na pagure.io (Git)
+		\item využívá projekt Antora (antora.org)
+		\item vydána na \textbf{docs.fedoraproject.org}
+	\end{itemize}
+
+	Přispět můžete po přečtení \\
+	\url{https://docs.fedoraproject.org/en-US/fedora-docs/contributing/}
+
+	\end{frame}
+
 
 	\begin{frame}{Otázky}
 		Kdo se moc ptá, moc se doví.
