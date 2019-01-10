@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="slide03_testday.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/lruzicka/Dokumenty/redhat/talks/test_days/images/community.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs2"><clipPath
+   id="Clip_1">
+  <path
+     id="path1958"
+     d="M0.06,0.723 L463.731,0.723 L463.731,425.94 L0.06,425.94 z" />
+</clipPath>
+<clipPath
+   id="Clip_2">
+  <path
+     id="path1961"
+     d="M0.06,0.723 L463.731,0.723 L463.731,425.94 L0.06,425.94 z" />
+</clipPath>
+<clipPath
+   id="Clip_3">
+  <path
+     id="path1964"
+     d="M0.06,0.723 L463.731,0.723 L463.731,425.94 L0.06,425.94 z" />
+</clipPath>
+<linearGradient
+   y2="344.099"
+   x2="276.638"
+   y1="358.809"
+   x1="336.423"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_1">
+  <stop
+     id="stop5204"
+     stop-color="#FADCB8"
+     offset="0" />
+  <stop
+     id="stop5206"
+     stop-color="#F4BE8C"
+     offset="0.994" />
+  <stop
+     id="stop5208"
+     stop-color="#F4BE8C"
+     offset="1" />
+</linearGradient>
+<linearGradient
+   y2="308.577"
+   x2="232.573"
+   y1="373.542"
+   x1="242.988"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_2">
+  <stop
+     id="stop5211"
+     stop-color="#4C4D4C"
+     offset="0" />
+  <stop
+     id="stop5213"
+     stop-color="#767776"
+     offset="1" />
+</linearGradient>
+<linearGradient
+   y2="309.254"
+   x2="149.178"
+   y1="419.288"
+   x1="149.178"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_3">
+  <stop
+     id="stop5216"
+     stop-color="#4C4D4C"
+     offset="0" />
+  <stop
+     id="stop5218"
+     stop-color="#767776"
+     offset="1" />
+</linearGradient>
+<linearGradient
+   y2="270.536"
+   x2="158.963"
+   y1="309.091"
+   x1="157.757"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_4">
+  <stop
+     id="stop5221"
+     stop-color="#FADCB8"
+     offset="0" />
+  <stop
+     id="stop5223"
+     stop-color="#F4BE8C"
+     offset="0.994" />
+  <stop
+     id="stop5225"
+     stop-color="#F4BE8C"
+     offset="1" />
+</linearGradient>
+<linearGradient
+   y2="208.314"
+   x2="102.455"
+   y1="207.652"
+   x1="61.089"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_5">
+  <stop
+     id="stop5228"
+     stop-color="#FADCB8"
+     offset="0" />
+  <stop
+     id="stop5230"
+     stop-color="#F4BE8C"
+     offset="0.994" />
+  <stop
+     id="stop5232"
+     stop-color="#F4BE8C"
+     offset="1" />
+</linearGradient>
+<radialGradient
+   r="19.475"
+   cy="225.891"
+   cx="110.404"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_6">
+  <stop
+     id="stop5235"
+     stop-color="#EDA09A"
+     offset="0" />
+  <stop
+     id="stop5237"
+     stop-color="#F9D5AF"
+     offset="1" />
+</radialGradient>
+<radialGradient
+   r="19.473"
+   cy="227.42"
+   cx="225.416"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_7">
+  <stop
+     id="stop5240"
+     stop-color="#EDA09A"
+     offset="0" />
+  <stop
+     id="stop5242"
+     stop-color="#F8D4AD"
+     offset="1" />
+</radialGradient>
+<linearGradient
+   y2="373.114"
+   x2="213.462"
+   y1="397.097"
+   x1="270.162"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_8">
+  <stop
+     id="stop5245"
+     stop-color="#FADCB8"
+     offset="0" />
+  <stop
+     id="stop5247"
+     stop-color="#F4BE8C"
+     offset="0.994" />
+  <stop
+     id="stop5249"
+     stop-color="#F4BE8C"
+     offset="1" />
+</linearGradient>
+<linearGradient
+   y2="321.654"
+   x2="165.957"
+   y1="396.225"
+   x1="165.957"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_9">
+  <stop
+     id="stop5252"
+     stop-color="#4C4D4C"
+     offset="0" />
+  <stop
+     id="stop5254"
+     stop-color="#767776"
+     offset="1" />
+</linearGradient>
+<clipPath
+   id="Clip_1-3">
+  <path
+     id="path5418"
+     d="M510.216,346.44 L583.628,346.44 L583.628,399.02 L510.216,399.02 z" />
+</clipPath>
+<radialGradient
+   gradientTransform="scale(1,-1)"
+   r="45.446"
+   cy="-257.745"
+   cx="617.826"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_1-6">
+  <stop
+     id="stop5421"
+     stop-color="#FFB08C"
+     offset="0" />
+  <stop
+     id="stop5423"
+     stop-opacity="0"
+     stop-color="#FFAA84"
+     offset="1" />
+</radialGradient>
+<clipPath
+   id="Clip_2-7">
+  <path
+     id="path5426"
+     d="M617.839,303.191 C643.325,302.854 662.637,283.108 663.27,257.822 L663.27,257.644 C662.913,232.122 643.084,212.931 617.815,212.299 L617.81,212.299 C592.248,212.641 573.013,232.429 572.38,257.758 C572.387,282.858 592.739,303.198 617.839,303.191 z" />
+</clipPath>
+<radialGradient
+   gradientTransform="scale(1,-1)"
+   r="37.497"
+   cy="-251.349"
+   cx="441.058"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_2-5">
+  <stop
+     id="stop5429"
+     stop-color="#FFB08C"
+     offset="0" />
+  <stop
+     id="stop5431"
+     stop-opacity="0"
+     stop-color="#FFAA84"
+     offset="1" />
+</radialGradient>
+<clipPath
+   id="Clip_3-3">
+  <path
+     id="path5434"
+     d="M441.069,288.846 C461.89,288.782 478.042,271.806 478.555,251.341 L478.555,251.335 C478.489,230.513 461.512,214.365 441.047,213.852 C420.338,213.858 403.555,230.651 403.561,251.36 C403.568,272.069 420.36,288.852 441.069,288.846 z" />
+</clipPath>
+<radialGradient
+   r="17.91"
+   cy="160.877"
+   cx="157.98"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_1-5">
+  <stop
+     id="stop5585"
+     stop-color="#EFAA98"
+     offset="0" />
+  <stop
+     id="stop5587"
+     stop-color="#F9D8AE"
+     offset="1" />
+</radialGradient>
+<radialGradient
+   r="17.91"
+   cy="160.877"
+   cx="295.801"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_2-6">
+  <stop
+     id="stop5590"
+     stop-color="#EFA496"
+     offset="0" />
+  <stop
+     id="stop5592"
+     stop-color="#F9D8AE"
+     offset="1" />
+</radialGradient>
+<clipPath
+   id="Clip_1-2">
+  <path
+     id="path5595"
+     d="M0.06,0.768 L553.063,0.768 L553.063,413.94 L0.06,413.94 z" />
+</clipPath>
+<radialGradient
+   gradientTransform="scale(1,-1)"
+   r="29.764"
+   cy="-189.034"
+   cx="499.606"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_1-1">
+  <stop
+     id="stop5769"
+     stop-color="#EA9098"
+     offset="0" />
+  <stop
+     id="stop5771"
+     stop-color="#F5C4AD"
+     offset="1" />
+</radialGradient>
+<clipPath
+   id="Clip_1-27">
+  <path
+     id="path5774"
+     d="M469.842,159.267 L529.371,159.267 L529.371,218.801 L469.842,218.801 z" />
+</clipPath>
+<radialGradient
+   gradientTransform="scale(1,-1)"
+   r="29.762"
+   cy="-162.891"
+   cx="316.715"
+   gradientUnits="userSpaceOnUse"
+   id="Gradient_2-0">
+  <stop
+     id="stop5777"
+     stop-color="#EC999B"
+     offset="0.005" />
+  <stop
+     id="stop5779"
+     stop-color="#F5C4AD"
+     offset="1" />
+</radialGradient>
+<clipPath
+   id="Clip_2-9">
+  <path
+     id="path5782"
+     d="M286.953,133.13 L346.477,133.13 L346.477,192.654 L286.953,192.654 z" />
+</clipPath>
+<clipPath
+   id="Clip_1-6">
+  <path
+     id="path6095"
+     d="M54.808,485.539 C42.698,498.44 18.694,497.561 11.438,490.647 C1.77,481.443 4.104,462.214 16.233,449.304 C28.333,436.408 46.8,434.074 57.444,444.069 C68.099,454.074 66.927,472.634 54.808,485.539 z" />
+</clipPath>
+<style
+   id="style6767"
+   type="text/css">
+    .str0 {stroke:#1F1A17;stroke-width:0.0358884}
+    .str2 {stroke:#1F1A17;stroke-width:0.0941953}
+    .str1 {stroke:#1F1A17;stroke-width:0.332321}
+    .fil4 {fill:#1F1A17}
+    .fil0 {fill:#DA251D}
+    .fil1 {fill:white}
+    .fil2 {fill:#1F1A17;fill-rule:nonzero}
+    .fil3 {fill:#969594;fill-rule:nonzero}
+  </style>
+
+  
+ 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="433.78457"
+     inkscape:cy="239.26287"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1174"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="20.312485,174.25973"
+       orientation="1,0"
+       id="guide1068"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-87)">
+    <g
+       id="g6871"
+       transform="matrix(0.37724666,0,0,0.37724666,87.544054,124.81801)">
+      <path
+         class="fil0 str0"
+         d="M 88.888889,267.67209 H 223.31574 c 7.22257,0 13.13182,-5.80266 13.13182,-12.89583 V 146.62304 c 0,-7.0931 -5.90875,-12.89582 -13.13182,-12.89582 h -9.02857 v 15.10965 c 0,3.17094 -2.59443,5.76537 -5.76537,5.76537 h -21.95505 c -3.17095,0 -5.76537,-2.59443 -5.76537,-5.76537 v -15.10965 h -49.92417 v 15.11107 c 0,3.17095 -2.59442,5.76537 -5.76537,5.76537 h -21.95505 c -3.170948,0 -5.76537,-2.59442 -5.76537,-5.76537 v -15.11107 h -8.498823 c -7.222574,0 -13.131823,5.80265 -13.131823,12.89582 v 108.15322 c 0,7.0931 5.90875,12.89583 13.131823,12.89583 z"
+         id="_161098904"
+         inkscape:connector-curvature="0"
+         style="clip-rule:evenodd;fill:#da251d;fill-rule:evenodd;stroke:#1f1a17;stroke-width:0.25588018;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <path
+         class="fil1 str1"
+         d="M 96.155668,258.29629 H 216.00903 c 6.63843,0 12.06947,-4.0917 12.06947,-9.09346 V 166.21097 H 84.090477 v 82.99186 c 0,5.00176 5.430904,9.09346 12.069469,9.09346 z"
+         id="_161098832"
+         inkscape:connector-curvature="0"
+         style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd;stroke:#1f1a17;stroke-width:2.36941051;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <path
+         class="fil2"
+         d="m 152.50386,238.21853 v 7.00583 h -26.43048 c 0.29282,-2.64676 1.14477,-5.15591 2.5823,-7.52774 1.42883,-2.37175 4.25861,-5.51318 8.47102,-9.43283 3.40701,-3.15954 5.48566,-5.3117 6.25497,-6.43829 1.03498,-1.55674 1.5571,-3.09544 1.5571,-4.6156 0,-1.67595 -0.44897,-2.96718 -1.35561,-3.87381 -0.90663,-0.90664 -2.15215,-1.35561 -3.74554,-1.35561 -1.57528,0 -2.82072,0.47649 -3.75495,1.41978 -0.92482,0.95234 -1.46512,2.52754 -1.61186,4.7254 l -7.50919,-0.75085 c 0.44863,-4.14881 1.84992,-7.12503 4.21262,-8.93802 2.36306,-1.80429 5.31169,-2.71093 8.85603,-2.71093 3.88286,0 6.9326,1.05337 9.14907,3.14143 2.21625,2.09704 3.32445,4.69817 3.32445,7.8115 0,1.76764 -0.3207,3.45272 -0.95269,5.05516 -0.632,1.6028 -1.63938,3.27875 -3.01281,5.02793 -0.91605,1.16324 -2.56448,2.83883 -4.9363,5.01851 -2.38117,2.17968 -3.89228,3.63574 -4.52427,4.3503 -0.63198,0.71427 -1.15383,1.41036 -1.54769,2.08798 h 14.97348 z"
+         id="_161098712"
+         inkscape:connector-curvature="0"
+         style="clip-rule:evenodd;fill:#1f1a17;fill-rule:nonzero;stroke-width:7.1298852;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <path
+         class="fil2"
+         d="m 164.06854,224.00867 c -1.95067,-0.82436 -3.37044,-1.95972 -4.24956,-3.3976 -0.88817,-1.43789 -1.32773,-3.02222 -1.32773,-4.73482 0,-2.93052 1.01644,-5.35739 3.06785,-7.27105 2.05141,-1.91409 4.96383,-2.87577 8.73696,-2.87577 3.73649,0 6.63949,0.96175 8.69989,2.87577 2.06952,1.91409 3.10449,4.34088 3.10449,7.27105 0,1.8224 -0.47613,3.44367 -1.42883,4.87214 -0.94328,1.41942 -2.28006,2.50943 -3.99266,3.26028 2.17968,0.87006 3.83716,2.15216 4.97288,3.83716 1.13536,1.67595 1.70319,3.61756 1.70319,5.81542 0,3.63574 -1.15383,6.58474 -3.47083,8.85603 -2.317,2.27137 -5.39397,3.40702 -9.24033,3.40702 -3.58063,0 -6.55721,-0.93423 -8.93803,-2.81167 -2.81131,-2.22538 -4.21262,-5.26571 -4.21262,-9.13053 0,-2.12492 0.53125,-4.07559 1.58433,-5.86141 1.05337,-1.7767 2.71998,-3.15013 4.99135,-4.11188 z m 1.55673,-7.5919 c 0,1.50205 0.42145,2.67435 1.27305,3.50776 0.85159,0.84254 1.97818,1.26363 3.3976,1.26363 1.42847,0 2.57325,-0.42109 3.43425,-1.27304 0.85159,-0.85159 1.2821,-2.02389 1.2821,-3.52587 0,-1.41942 -0.42109,-2.54573 -1.27304,-3.39761 -0.8516,-0.85159 -1.96878,-1.27268 -3.37009,-1.27268 -1.44694,0 -2.60076,0.43015 -3.46177,1.2821 -0.85159,0.86064 -1.2821,1.99636 -1.2821,3.41578 z m -0.69609,16.8415 c 0,2.07893 0.53125,3.69984 1.59368,4.86308 1.06213,1.16289 2.39022,1.73976 3.98361,1.73976 1.55673,0 2.84824,-0.55841 3.86475,-1.67566 1.01644,-1.11754 1.52957,-2.72939 1.52957,-4.84462 0,-1.84086 -0.52219,-3.32445 -1.55709,-4.44198 -1.03498,-1.11719 -2.35365,-1.67567 -3.94704,-1.67567 -1.84086,0 -3.21465,0.64105 -4.11187,1.90468 -0.90664,1.27304 -1.35561,2.64675 -1.35561,4.13034 z"
+         id="_1610987121"
+         inkscape:connector-curvature="0"
+         style="clip-rule:evenodd;fill:#1f1a17;fill-rule:nonzero;stroke-width:7.1298852;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <rect
+         x="103.60925"
+         y="110.33048"
+         width="20.920509"
+         height="39.749107"
+         ry="8.5772514"
+         rx="8.5772514"
+         class="fil4 str2"
+         id="_161098544"
+         style="clip-rule:evenodd;fill:#1f1a17;fill-rule:evenodd;stroke:#1f1a17;stroke-width:0.67160165;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <rect
+         x="187.0125"
+         y="110.33082"
+         width="20.920509"
+         height="39.749107"
+         ry="8.5772514"
+         rx="8.5772514"
+         class="fil4 str2"
+         id="_161098496"
+         style="clip-rule:evenodd;fill:#1f1a17;fill-rule:evenodd;stroke:#1f1a17;stroke-width:0.67160165;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <flowRoot
+         transform="matrix(0.56250015,0,0,0.56250015,-36.247063,-291.1044)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none"
+         id="flowRoot6853"
+         xml:space="preserve"><flowRegion
+           style="fill:#808080"
+           id="flowRegion6855"><rect
+             style="fill:#808080"
+             y="840.84363"
+             x="257.14285"
+             height="265.71429"
+             width="644.28571"
+             id="rect6857" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor Bold';fill:#808080"
+           id="flowPara6859">TEST DAY</flowPara></flowRoot>    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6873"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:35.66666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.20832446,0,0,0.20832446,77.043297,-4.1618934)"><flowRegion
+         id="flowRegion6875"
+         style="line-height:35.66666794px"><rect
+           id="rect6877"
+           width="505.71429"
+           height="195.71428"
+           x="-250"
+           y="549.4151"
+           style="line-height:35.66666794px" /></flowRegion><flowPara
+         id="flowPara6879"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:35.66666794px;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor Bold'">Test Days focus on a particular part of the release (app, feature, ...).</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6873-0"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:35.66666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.20832446,0,0,0.20832446,50.93819,83.2787)"><flowRegion
+         id="flowRegion6875-8"
+         style="line-height:35.66666794px"><rect
+           id="rect6877-9"
+           width="547.44464"
+           height="119.51104"
+           x="-250"
+           y="549.4151"
+           style="line-height:35.66666794px" /></flowRegion><flowPara
+         id="flowPara6879-3"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:35.66666794px;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor Bold'">Test Days provide testing guidelines to the community.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6873-1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:35.66666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.20832446,0,0,0.20832446,258.06914,139.97513)"><flowRegion
+         id="flowRegion6875-4"
+         style="line-height:35.66666794px"><rect
+           id="rect6877-8"
+           width="505.71429"
+           height="195.71428"
+           x="-250"
+           y="549.4151"
+           style="line-height:35.66666794px" /></flowRegion><flowPara
+         id="flowPara6879-9"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:35.66666794px;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor Bold'">Test Days provide community testers with prebuilt environments.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6873-6"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:35.66666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.20832446,0,0,0.20832446,247.86378,60.222153)"><flowRegion
+         id="flowRegion6875-7"
+         style="line-height:35.66666794px"><rect
+           id="rect6877-7"
+           width="505.71429"
+           height="195.71428"
+           x="-250"
+           y="549.4151"
+           style="line-height:35.66666794px" /></flowRegion><flowPara
+         id="flowPara6879-37"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:35.66666794px;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor Bold'">Test Days offer assistance to the community testers by the Fedora QE.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6873-12"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:35.66666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.20832446,0,0,0.20832446,217.62569,-11.215347)"><flowRegion
+         id="flowRegion6875-2"
+         style="line-height:35.66666794px"><rect
+           id="rect6877-1"
+           width="563.77393"
+           height="103.18179"
+           x="-250"
+           y="549.4151"
+           style="line-height:35.66666794px" /></flowRegion><flowPara
+         id="flowPara6879-5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:35.66666794px;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor Bold'">Test Days usually take place between Alpha and GA.</flowPara></flowRoot>  </g>
+</svg>
