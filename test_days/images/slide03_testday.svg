@@ -16,9 +16,9 @@
    id="svg8"
    sodipodi:docname="slide03_testday.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   inkscape:export-filename="/home/lruzicka/Dokumenty/redhat/talks/test_days/images/testdays.png"
-   inkscape:export-xdpi="300"
-   inkscape:export-ydpi="300">
+   inkscape:export-filename="/home/lruzicka/Documents/redhat/talks/test_days/images/testdays.png"
+   inkscape:export-xdpi="299.60001"
+   inkscape:export-ydpi="299.60001">
   <defs
      id="defs2">
     <marker
@@ -450,9 +450,9 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1174"
-     inkscape:window-x="0"
-     inkscape:window-y="26"
+     inkscape:window-height="1080"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -622,13 +622,15 @@
        d="m 188.28056,149.53997 38.17559,-18.14286"
        id="path930-7"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send-5)"
        d="M 89.733748,154.72989 51.558158,136.58703"
        id="path930-5"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send-6)"
        d="m 194.88232,205.30285 38.17559,18.14286"
@@ -637,9 +639,10 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send-1)"
-       d="m 148.66515,229.41844 0.27768,42.26657"
+       d="m 143.37348,230.55237 0.27768,37.73086"
        id="path930-0"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
