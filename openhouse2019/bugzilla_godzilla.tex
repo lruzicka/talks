@@ -1,0 +1,76 @@
+\documentclass[12pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+%\usetheme{Malmoe}
+\usetheme{Ilmenau}
+\usecolortheme{orchid}
+\usepackage{graphicx}
+\usepackage{newverbs}
+
+\newverbcommand{\tc}{\color{blue}}{}
+
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{./images/background.jpg}}
+
+\begin{document}
+	\author{Lukáš Růžička (lruzicka@redhat.com)}
+	\title{Bugzilla Kills Godzilla}
+	\subtitle{or How to report bugs the useful way}
+	\titlegraphic{\includegraphics[height=2cm]{buggie.png}}
+	\institute{Fedora QE}
+	\date{}
+%	\subject{Fedora 29}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+
+\begin{frame}[plain]
+	\maketitle 
+\end{frame}
+
+\begin{frame}{What is Bugzilla?}
+Bugzilla is a bug-tracking (issue-tracking) system. Among the most important features are:
+
+\begin{itemize}
+\item open source
+\item powerful bug tracking
+\item highly configurable
+\item history aware
+\item robust and stable
+\item secure
+\item various interfaces (configurable and localisable)
+\end{itemize}
+
+More at {\color{blue}\url{www.bugzilla.org}}.
+\end{frame}
+
+\begin{frame}{Red Hat Bugzilla}
+Bugzilla is the bug-tracking system used at Red Hat. It is available to everyone (customers, collaborators, developers, QAs and more) interested in:
+
+\begin{itemize}
+	\item Red Hat products
+	\item JBoss products
+	\item Fedora products
+	\item Community projects
+	\item Internal products
+\end{itemize}
+
+Red Hat Bugzilla lives at {\color{red}\url{bugzilla.redhat.com}}.
+\end{frame}
+
+\begin{frame}{Why bug tracking?}
+
+By tracking you bugs, you will
+
+\begin{itemize}
+	\item receive information about a problem
+	\item organize your time, plan, and estimate
+	\item cooperate with others
+	\item share knowledge and ideas
+	\item see the progress
+	\item find a solution.
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}
