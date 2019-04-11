@@ -173,6 +173,70 @@ Applications and services use logging to text files to keep track of all their a
 \includegraphics[width=10cm]{images/bz_logged.png}
 \end{frame}
 
+\begin{frame}{Classify the bug}
+\includegraphics[width=10cm]{images/bz_classification.png}
+\end{frame}
 
+\begin{frame}{Choose the correct product}
+\includegraphics[width=10cm]{images/bz_product.png}
+\end{frame}
+
+\begin{frame}{File the bug (part 1)}
+\includegraphics[width=10cm]{images/bz_header.png}
+\end{frame}
+
+\begin{frame}{File the bug (part 2)}
+\includegraphics[width=10cm]{images/bz_description.png}
+\end{frame}
+
+\begin{frame}{Description of problem}
+\begin{itemize}
+	\item What is the problem?
+	\item When does it appear?
+	\item How much does it affect work?
+	\item Why is it a problem?
+	\item others
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Version of selected component}
+Provide the version number of the problematic components and also of the affected components.
+\begin{itemize}
+	\item \textbf{About} menu in GUI
+	\item \texttt{-v} or \texttt{--version} option on CLI (or \texttt{man})
+	\item \texttt{rpm -q} for installed packages
+	\item \texttt{dnf info} for installed and available packages
+\end{itemize}
+\end{frame}
+
+\begin{frame}{How reproducible}
+\begin{itemize}
+	\item Always
+	\item Sometimes
+	\item Under certain conditions -- describe them
+	\item Heisenbug 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Steps to reproduce}
+Procedure that leads to reproducing the bug.
+\begin{itemize}
+	\item One activity in one step.
+	\item Do not skip steps, even if you think the step is obvious.
+	\item Be exact and detailed.
+\end{itemize}
+Others want to see that bug, too. 
+\end{frame}
+
+\begin{frame}{Results}
+\begin{description}
+	\item[Actual] -- what is the result of the current behaviour
+	\item[Expected] -- how you think the system should behave
+\end{description}
+\end{frame}
+
+\begin{frame}{File the bug (part 3)}
+\includegraphics[width=10cm]{images/bz_footer.png}
+\end{frame}
 
 \end{document}
