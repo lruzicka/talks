@@ -1,0 +1,1 @@
+# Píšeme hudbu v MuseScore
