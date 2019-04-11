@@ -133,6 +133,46 @@ If your bug report should be good, you have to collect some info to provide, for
 \end{itemize}
 \end{frame}
 
+\begin{frame}{ABRT}
+The \textbf{Automatic Bugzilla Reporting Tool} is a service that monitors your computer and analyzes problems.
+\begin{itemize}
+	\item installed by default
+	\item runs as a service
+	\item collects data
+	\item makes reporting easier
+	\item sometimes useless
+\end{itemize}
+\end{frame}
+
+\begin{frame}{journalctl}
+\textbf{journalctl} is a front-end to a service that collects the majority of logs of the system. You can filter the logs using various options.
+\begin{description}
+	\item[journalctl -b] shows logs from the latest boot
+	\item[journalctl -u] shows logs from a certain system unit
+	\item[journalctl -f] shows latest logs and continuously shows new records
+	\item[journalctl -S -U] shows logs between certain time
+\end{description}
+See \texttt{man journalctl} for more info.
+\end{frame}
+
+\begin{frame}{Collecting logs}
+Applications and services use logging to text files to keep track of all their activities. These logs can be examined, to see what went wrong. Logs can be located:
+\begin{itemize}
+	\item journalctl
+	\item \texttt{/var/log/*}
+	\item other locations (check settings)
+\end{itemize}	
+\end{frame}
+
+\section{Using Bugzilla}
+\begin{frame}{New at Bugzilla}
+\includegraphics[width=10cm]{images/bz_new.png}
+\end{frame}
+
+\begin{frame}{Logged into Bugzilla}
+\includegraphics[width=10cm]{images/bz_logged.png}
+\end{frame}
+
 
 
 \end{document}
