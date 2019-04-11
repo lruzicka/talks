@@ -59,9 +59,8 @@ Bugzilla is the bug-tracking system used at Red Hat. It is available to everyone
 Red Hat Bugzilla lives at {\color{red}\url{bugzilla.redhat.com}}.
 \end{frame}
 
+\section{Reporting bugs}
 \begin{frame}{Why bug tracking?}
-
-By tracking you bugs, you can
 
 \begin{itemize}
 	\item receive information about a problem
@@ -74,7 +73,7 @@ By tracking you bugs, you can
 \end{frame}
 
 \begin{frame}{Why you should think about reporting bugs?}
-Reporting bugs is an important activity because you
+You want others know that you  \ldots{}
 \begin{itemize}
 	\item want a problem fixed
 	\item have a unique hardware and setting
@@ -82,85 +81,87 @@ Reporting bugs is an important activity because you
 	\item have different needs and expectations
 	\item want to keep people informed
 \end{itemize}
-If you report bugs, your will contribute a lot with just a little cost.
+
 \end{frame}
 
-\section{Reporting bugs}
-
 \begin{frame}{What could be a bug?}
-You would like to report a bug anytime you find out that something is not right. For example, when the program:
+You would like to report a bug anytime you find out that something is not right, especially when the program:
 \begin{itemize}
 	\item does not start
 	\item keeps crashing
 	\item behaves incorrectly
 	\item reports errors
-	\item has problems with user interface
 	\item lacks some features
 	\item and more
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Before you report}
-It is good to report bugs when you have some information about them. You should be able to describe
+Think about basic information that you can say about the problem, for example \ldots
 
 \begin{itemize}
-	\item what happened
-	\item when 
-	\item how 
-	\item how often
-	\item why (if possible)
-	\item why it should not have happened
+	\item what happened?
+	\item when? 
+	\item how? 
+	\item how often?
+	\item why (if possible)?
+	\item why it should not have happened?
 \end{itemize}	
 \end{frame}
 
-\begin{frame}{How to reproduce a bug?}
-	Reproducing the bug is a very important thing. If you cannot reproduce it, tracking it down can be impossible.
-	\begin{itemize}
-		\item Try to make the bug happen again.
-		\item Learn the steps that lead to the bug.
-		\item Try changing some of the steps and see if it changes things.
-	\end{itemize}
+\begin{frame}{Reproducing the bug}
+	\begin{enumerate}
+		\item Make sure you can repeat the bug again (and again, and again).
+		\item Record the steps needed to reproduce it.
+		\item Try changing some of the steps to see if a change can affect the bug (or not).
+		\item Try to find out if the bug can be avoided by changing the workflow (workaround).
+	\end{enumerate}
 \end{frame}
 
 \begin{frame}{Getting and providing info}
 If your bug report should be good, you have to collect some info to provide, for example:
 \begin{itemize}
-	\item system logs
-	\item system info
-	\item how to reproduce the bug
-	\item screenshots
-	\item videos
+	\item system logs and info
+	\item application messages
+	\item screenshots and videos
 \end{itemize}
 \end{frame}
 
+\section{Collect information}
 \begin{frame}{ABRT}
 The \textbf{Automatic Bugzilla Reporting Tool} is a service that monitors your computer and analyzes problems.
 \begin{itemize}
 	\item installed by default
-	\item runs as a service
-	\item collects data
+	\item records failures and collects data
 	\item makes reporting easier
-	\item sometimes useless
+	\item sometimes is useless
+	\item use {\color{blue}\texttt{abrt}}, {\color{blue} \texttt{abrt-cli}} for command line
+	\item use {\color{blue} \texttt{gnome-abrt}} for GUI 
 \end{itemize}
 \end{frame}
 
 \begin{frame}{journalctl}
 \textbf{journalctl} is a front-end to a service that collects the majority of logs of the system. You can filter the logs using various options.
 \begin{description}
-	\item[journalctl -b] shows logs from the latest boot
-	\item[journalctl -u] shows logs from a certain system unit
-	\item[journalctl -f] shows latest logs and continuously shows new records
-	\item[journalctl -S -U] shows logs between certain time
+	\item[\texttt{journalctl -b}] shows logs from the latest boot
+	\item[\texttt{journalctl -u}] shows logs from a certain system unit
+	\item[\texttt{journalctl -f}] shows latest logs and continuously shows new records
+	\item[\texttt{journalctl -S}] shows logs since a time point
+	\item[\texttt{journalctl -U}] shows logs until a time point
 \end{description}
-See \texttt{man journalctl} for more info.
+
+\vspace{5pt}
+
+See {\color{blue}\texttt{man journalctl}} for more info.
 \end{frame}
 
 \begin{frame}{Collecting logs}
-Applications and services use logging to text files to keep track of all their activities. These logs can be examined, to see what went wrong. Logs can be located:
 \begin{itemize}
-	\item journalctl
-	\item \texttt{/var/log/*}
-	\item other locations (check settings)
+	\item inspect {\color{blue} \texttt{/var/log/}} for log files 
+	\item use {\color{blue} \texttt{dmesg}} for kernel logs 
+	\item run the application from the terminal and see if messages are printed to stdin
+	\item inspect {\color{blue} \texttt{.local}} and {\color{blue} \texttt{.config}} for settings 
+	\item run the command with {\color{blue} \texttt{-v}} for more verbosity
 \end{itemize}	
 \end{frame}
 
@@ -199,20 +200,20 @@ Applications and services use logging to text files to keep track of all their a
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Version of selected component}
+\begin{frame}[fragile]{Version of selected component}
 Provide the version number of the problematic components and also of the affected components.
 \begin{itemize}
-	\item \textbf{About} menu in GUI
-	\item \texttt{-v} or \texttt{--version} option on CLI (or \texttt{man})
-	\item \texttt{rpm -q} for installed packages
-	\item \texttt{dnf info} for installed and available packages
+	\item {\color{blue}\textbf{About}} menu in GUI
+	\item {\color{blue}\texttt{-v}} or {\color{blue}{\verb|--version|}} option on CLI (or \texttt{man})
+	\item {\color{blue}\texttt{rpm -q}} for installed packages
+	\item {\color{blue}\texttt{dnf info}} for installed and available packages
 \end{itemize}
 \end{frame}
 
 \begin{frame}{How reproducible}
 \begin{itemize}
 	\item Always
-	\item Sometimes
+	\item Sometimes -- specify when exactly
 	\item Under certain conditions -- describe them
 	\item Heisenbug 
 \end{itemize}
@@ -223,7 +224,8 @@ Procedure that leads to reproducing the bug.
 \begin{itemize}
 	\item One activity in one step.
 	\item Do not skip steps, even if you think the step is obvious.
-	\item Be exact and detailed.
+	\item Pay attention to details.
+	\item Be exact.
 \end{itemize}
 Others want to see that bug, too. 
 \end{frame}
@@ -244,5 +246,14 @@ Others want to see that bug, too.
 {\Large File the bug anyway!}
 \end{frame}
 
+\begin{frame}{Q\&A}
+
+{\Large Question time.}
+\end{frame}
+
+\begin{frame}{End}
+
+{\Large Thank you for coming!}
+\end{frame}
 
 \end{document}
