@@ -21,7 +21,7 @@
 	\date{}
 %	\subject{Fedora 29}
 	%\setbeamercovered{transparent}
-	%\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{navigation symbols}{}
 
 \begin{frame}[plain]
 	\maketitle 
@@ -91,9 +91,10 @@ You would like to report a bug anytime you find out that something is not right,
 	\item keeps crashing
 	\item behaves incorrectly
 	\item reports errors
-	\item lacks some features
+	\item lacks some features\footnote{If you want to suggest new features, contact upstream developers.}
 	\item and more
 \end{itemize}
+
 \end{frame}
 
 \begin{frame}{Before you report}
@@ -111,9 +112,11 @@ Think about basic information that you can say about the problem, for example \l
 
 \begin{frame}{Reproducing the bug}
 	\begin{enumerate}
-		\item Make sure you can repeat the bug again (and again, and again).
+		\item Make sure you can repeat the bug again.
 		\item Record the steps needed to reproduce it.
-		\item Try changing some of the steps to see if a change can affect the bug (or not).
+		\item Try to achieve a \textbf{minimal reproducer}.
+		\item Try changing some of the steps to see if situation changes.
+		\item Try to use clean user and application profiles.
 		\item Try to find out if the bug can be avoided by changing the workflow (workaround).
 	\end{enumerate}
 \end{frame}
@@ -140,14 +143,15 @@ The \textbf{Automatic Bugzilla Reporting Tool} is a service that monitors your c
 \end{itemize}
 \end{frame}
 
-\begin{frame}{journalctl}
+\begin{frame}[fragile]{journalctl}
 \textbf{journalctl} is a front-end to a service that collects the majority of logs of the system. You can filter the logs using various options.
+
 \begin{description}
-	\item[\texttt{journalctl -b}] shows logs from the latest boot
-	\item[\texttt{journalctl -u}] shows logs from a certain system unit
-	\item[\texttt{journalctl -f}] shows latest logs and continuously shows new records
-	\item[\texttt{journalctl -S}] shows logs since a time point
-	\item[\texttt{journalctl -U}] shows logs until a time point
+	\item[-\,-\,boot] logs from the latest boot
+	\item[-\,-\,unit] logs from a certain system unit
+	\item[-\,-\,follow] follow logs as they appear
+	\item[-\,-\,since] logs since a time point
+	\item[-\,-\,until] logs until a time point
 \end{description}
 
 \vspace{5pt}
@@ -159,10 +163,41 @@ See {\color{blue}\texttt{man journalctl}} for more info.
 \begin{itemize}
 	\item inspect {\color{blue} \texttt{/var/log/}} for log files 
 	\item use {\color{blue} \texttt{dmesg}} for kernel logs 
-	\item run the application from the terminal and see if messages are printed to stdin
+	\item run the application from the terminal and see if messages are printed to \texttt{stdout} and \texttt{stderr}
 	\item inspect {\color{blue} \texttt{.local}} and {\color{blue} \texttt{.config}} for settings 
 	\item run the command with {\color{blue} \texttt{-v}} for more verbosity
 \end{itemize}	
+\end{frame}
+
+\begin{frame}{Redirecting output}
+Let's say we run a script to get the results. It sends messages to \textbf{stdout} and \textbf{stderr}. We may need to redirect that output.
+\begin{description}
+	\item[>] stdout to file
+	\item[2>] stderr to file
+	\item[2>\&1] stderr to stdout
+	\item[\&>] everything to file
+\end{description}
+\end{frame}
+
+\begin{frame}{Getting logs from the machine}
+Sometimes, you cannot \textbf{copy\&paste} logs from the testing (virtual) machine. There are several ways, how you can get them out:
+
+\begin{itemize}
+ \item using \textbf{scp} or \textbf{rsync}
+ \item using \textbf{fpaste} or \textbf{dpaste}	
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Using dpaste}
+Fedora offers \textbf{fpaste} by default, but it returns a long and hard to remember hash -- \texttt{Kut1tUlXWJvpwI2QEcX5EA}. 
+
+\vspace{5pt}
+
+\textbf{dpaste} returns a four letter hash, which is fairly easy to remember -- \texttt{fxEr}.
+
+\vspace{5pt}
+
+You can get \textbf{dpaste} from \url{https://github.com/lruzicka/dpaste.git}
 \end{frame}
 
 \section{Using Bugzilla}

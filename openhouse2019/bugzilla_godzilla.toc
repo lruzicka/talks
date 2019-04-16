@@ -1,4 +1,4 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@sectionintoc {2}{Reporting bugs}{4}{0}{2}
 \beamer@sectionintoc {3}{Collect information}{10}{0}{3}
-\beamer@sectionintoc {4}{Using Bugzilla}{13}{0}{4}
+\beamer@sectionintoc {4}{Using Bugzilla}{16}{0}{4}
