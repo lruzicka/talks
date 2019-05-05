@@ -1,9 +1,12 @@
-\documentclass[12pt,a4paper]{beamer}
+\documentclass[12pt]{beamer}
 \usepackage[utf8]{inputenc}
-\usepackage[czech]{babel}
-
-\usetheme{Warsaw}
-\usecolortheme{seagull}
+\usepackage[T1]{fontenc}
+%\usepackage[czech]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{montserrat}
+\usetheme{Fedora}
+%\usecolortheme{seagull}
 
 \title{Co když zmáčknu to červené tlačítko?}
 \subtitle{aneb Jak neodpálit jadernou bombu.}
@@ -11,8 +14,10 @@
 \date{12. prosince 2018, FIT ČVUT Praha}
 
 \begin{document}
-	\maketitle
-	
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
     \section{Proč psát dokumentaci?}
     
     	\begin{frame}{Žádná dokumentace, dobrá dokumentace?}
@@ -348,16 +353,17 @@ S dokumentací zacházíme jako s kódem a používáme:
 	\end{frame}
 
 \begin{frame}{Dokumentace v Red Hatu obsahově}
-Red Hat v současné době udržuje několik dokumentačních projektů. Organizační struktura dokumentačního oddělení má několik pozic:
+Red Hat v současné době udržuje mnoho dokumentačních projektů. Organizační struktura dokumentačního oddělení má několik pozic:
 
 \begin{itemize}
 	\item obsahový stratég (content strategist)
-	\item technický manažer (technical manager)
+	\item technický manažer (pillar lead)
+	\item manager pro lidské zdroje (people manager)
 	\item programový manažer (document program manager)
 	\item dokumentátor (technical writer)
 \end{itemize}
 
-Každý z nich je zodpovědný za jinou oblast vývoje dokumentace, leč jejich funkce se mohou v Red Hatu překrývat, protože Red Hat pracuje na principu \textit{meritokracie} a platí, že nejlepší názor se počítá. 
+Každý z nich je zodpovědný za jinou oblast vývoje dokumentace.
 \end{frame}
 
 
@@ -385,7 +391,7 @@ Každý z nich je zodpovědný za jinou oblast vývoje dokumentace, leč jejich 
 	\end{frame}
 
 	\begin{frame}{Probíhající diskuse o dokumentaci}
-	V dokumentačním týmu v minulosti proběhlo několik celofiremních diskusí a iniciativ o tom, jak dělat věci lépe, aby zákazník dostal za svoje peníze co nejlepší službu. 
+	V dokumentačním týmu v minulosti proběhlo několik diskusí a iniciativ o tom, jak dělat věci lépe
 	
 	\begin{itemize}
 		\item spolupráce upstream $\longleftrightarrow$ downstream (upstream first)
