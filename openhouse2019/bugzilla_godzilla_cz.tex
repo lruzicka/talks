@@ -55,102 +55,102 @@ Ve Fedoře se pro sledování chyb také používá Bugzilla. Kdokoliv se do ní
 	\item vnitřní produkty
 \end{itemize}
 
-Red Hat Bugzilla lives at {\color{red}\url{bugzilla.redhat.com}}.
+Bugzilla Red Hatu je dostupná na {\color{red}\url{bugzilla.redhat.com}}.
 \end{frame}
 
 \section{Hlášení chyb}
 \begin{frame}{Proč sledovat chyby?}
 
 \begin{itemize}
-	\item receive information about a problem
-	\item organize your time, plan, and estimate
-	\item cooperate with others
-	\item share knowledge and ideas
-	\item see the progress
-	\item find a solution.
+	\item nahlášení problému
+	\item organizace času, plánování, odhady
+	\item spolupráce s ostatními
+	\item sdílení nápadů a vědomostí
+	\item zobrazení postupu
+	\item nalezení řešení
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Why you should think about reporting bugs?}
-You want others know that you  \ldots{}
+\begin{frame}{Proč byste měli uvažovat o nahlášení chyby?}
+Aby se ostatní dozvěděli, že  \ldots{}
 \begin{itemize}
-	\item want a problem fixed
-	\item have a unique hardware and setting
-	\item have a new idea
-	\item have different needs and expectations
-	\item want to keep people informed
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{What could be a bug?}
-You would like to report a bug anytime you find out that something is not right, especially when the program:
-\begin{itemize}
-	\item does not start
-	\item keeps crashing
-	\item behaves incorrectly
-	\item reports errors
-	\item lacks some features\footnote{If you want to suggest new features, contact upstream developers.}
-	\item and more
+	\item jste asi našli chybu
+	\item chcete, aby se chyba opravila
+	\item máte nějaký zvláštní hardware nebo nastavení
+	\item máte nový nápad a přístup
+	\item potřebujete zkrátka něco jiného
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Before you report}
-Think about basic information that you can say about the problem, for example \ldots
+\begin{frame}{Co by mohla být chyba?}
+Chyba by mohlo být všechno, co se nějakým způsobem nechová podle našeho očekávání:
+\begin{itemize}
+	\item nespouští se to
+	\item padá to
+	\item běhá to divně
+	\item cosi to hlásí
+	\item nedělá to, co má dělat\footnote{Když chcete navrhnout nové funkce, kontaktujte upstream.}
+	\item a další
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Než to ohlásím}
+Popřemýšlejte o základních věcech, které o problému víte, například \ldots
 
 \begin{itemize}
-	\item what happened?
-	\item when? 
-	\item how? 
-	\item how often?
-	\item why (if possible)?
-	\item why it should not have happened?
+	\item co se stalo?
+	\item kdy? 
+	\item jak? 
+	\item jak často?
+	\item proč (jestli to víte)?
+	\item proč se to nemělo stát?
 \end{itemize}	
 \end{frame}
 
-\begin{frame}{Reproducing the bug}
+\begin{frame}{Opakování chyby}
 	\begin{enumerate}
-		\item Make sure you can repeat the bug again.
-		\item Record the steps needed to reproduce it.
-		\item Try to achieve a \textbf{minimal reproducer}.
-		\item Try changing some of the steps to see if situation changes.
-		\item Try to use clean user and application profiles.
-		\item Try to find out if the bug can be avoided by changing the workflow (workaround).
+		\item Zkuste chybu zopakovat.
+		\item Zapište si kroky, které je k tomu potřeba udělat.
+		\item Zkuste najít nejkratší postup k chybě, tzv. \textbf{minimal reproducer}.
+		\item Zkuste změnit nějaké kroky, jestli se náhodou chyba nevyřeší.
+		\item Zkuste totéž v čistém uživatelském profilu.
+		\item Zkuste najít způsob, jak se chybě vyhnout (workaround).
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}{Getting and providing info}
-If your bug report should be good, you have to collect some info to provide, for example:
+\begin{frame}{Získávání a poskytování informací}
+Chcete-li, aby chybové hlášení bylo dobré, měli byste k němu připojit další informace:
 \begin{itemize}
-	\item system logs and info
-	\item application messages
-	\item screenshots and videos
+	\item systémové logy a informace
+	\item výpisy z dotčené aplikace
+	\item screenshoty nebo videa
 \end{itemize}
 \end{frame}
 
-\section{Collect information}
+\section{Sběr informací}
 \begin{frame}{ABRT}
-The \textbf{Automatic Bugzilla Reporting Tool} is a service that monitors your computer and analyzes problems.
+\textbf{Automatic Bugzilla Reporting Tool} je služba, která hlídá váš systém a analyzuje problémy.
 \begin{itemize}
-	\item installed by default
-	\item records failures and collects data
-	\item makes reporting easier
-	\item sometimes is useless
-	\item use {\color{blue}\texttt{abrt}}, {\color{blue} \texttt{abrt-cli}} for command line
-	\item use {\color{blue} \texttt{gnome-abrt}} for GUI 
+	\item předinstalován
+	\item zaznamenává pády a sbírá data
+	\item ulehčuje hlášení chyb
+	\item někdy nepomůže
+	\item použijte {\color{blue}\texttt{abrt}}, {\color{blue} \texttt{abrt-cli}} na CLI
+	\item nebo {\color{blue} \texttt{gnome-abrt}} v GUI 
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Collecting logs using \textbf{journalctl}}
-\textbf{journalctl} is a front-end to a service that collects the majority of logs of the system. You can filter the logs using various options.
+\begin{frame}[fragile]{Získání logů pomocí \textbf{journalctl}}
+\textbf{journalctl} je rozhraní pro přístup k systémovým zprávám. Lze je filtrovat pomocí následujících možností.
 
 \begin{description}
-	\item[-\,-\,boot] logs from the latest boot
-	\item[-\,-\,unit] logs from a certain system unit
-	\item[-\,-\,follow] follow logs as they appear
-	\item[-\,-\,since] logs since a time point
-	\item[-\,-\,until] logs until a time point
+	\item[-\,-\,boot] zprávy od posledního startu
+	\item[-\,-\,unit] zprávy od konkrétní služby
+	\item[-\,-\,follow] zprávy se zobrazují živě
+	\item[-\,-\,since] zprávy od určitého časového bodu
+	\item[-\,-\,until] zprávy do určitého časového bodu
 \end{description}
 
 \vspace{5pt}
@@ -158,138 +158,150 @@ The \textbf{Automatic Bugzilla Reporting Tool} is a service that monitors your c
 See {\color{blue}\texttt{man journalctl}} for more info.
 \end{frame}
 
-\begin{frame}{Collecting logs the old way}
+\begin{frame}{Získání logů postaru}
 \begin{itemize}
-	\item inspect {\color{blue} \texttt{/var/log/}} for log files 
-	\item use {\color{blue} \texttt{dmesg}} for kernel logs 
-	\item run the application from the terminal and see if messages are printed to {\color{blue}\texttt{stdout}} and {\color{blue}\texttt{stderr}}
-	\item inspect {\color{blue} \texttt{$\sim$/.local}}, {\color{blue} \texttt{$\sim$/.config}}, and {\color{blue} \texttt{/etc}} for settings 
-	\item run the command with {\color{blue} \texttt{-v}} for more verbosity
+	\item adresář {\color{blue} \texttt{/var/log/}} pro některé logy
+	\item program {\color{blue} \texttt{dmesg}} k prozkoumání kernelových logů 
+	\item spuštění aplikace z terminálu pro zobrazení případných zpráv na {\color{blue}\texttt{stdout}} a {\color{blue}\texttt{stderr}}
+	\item adresáře {\color{blue} \texttt{$\sim$/.local}}, {\color{blue} \texttt{$\sim$/.config}}, a {\color{blue} \texttt{/etc}} s nastavením 
+	\item zkuste program spustit s přepínačem {\color{blue} \texttt{-v}} pro větší ukecanost
 \end{itemize}	
 \end{frame}
 
-\begin{frame}{Redirecting output}
-Let's say we run a script to get the results. It sends messages to \textbf{stdout} and \textbf{stderr}. We may need to redirect that output.
+\begin{frame}{Směrování výstupu}
+Aplikace posílají zprávy na \textbf{stdout} a \textbf{stderr}. Někdy se může hodit přesměrovat je do souboru.
 \begin{description}
-	\item[>] stdout to file
-	\item[2>] stderr to file
-	\item[2>\&1] stderr to stdout
-	\item[\&>] everything to file
+	\item[>] stdout do souboru
+	\item[2>] stderr do souboru
+	\item[2>\&1] stderr do stdout
+	\item[\&>] všechno do souboru
 \end{description}
+
+Například:\\ {\color{blue} \texttt{journalctl -b > logs-since-boot.txt}}
+
 \end{frame}
 
-\begin{frame}{Getting logs from the machine}
-Sometimes, you cannot \textbf{copy\&paste} logs from the testing (virtual) machine. There are several ways, how you can get them out:
+\begin{frame}{Kopírování logů z počítače ven}
+Někdy nemůžete kopírovat informace pomocí \textbf{Ctrl-C \& Ctrl-V}, protože to systém neumožňuje (console, virtuálka). Lze však použít jinou metodu:
 
 \begin{itemize}
- \item using \textbf{scp} or \textbf{rsync}
- \item using \textbf{fpaste} or \textbf{dpaste}	
+ \item pomocí \textbf{scp} nebo \textbf{rsync}
+ \item pomocí \textbf{fpaste} nebo \textbf{dpaste}	
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Using dpaste}
-Fedora offers \textbf{fpaste} by default, but it returns a long and hard to remember hash -- \texttt{Kut1tUlXWJvpwI2QEcX5EA}. 
+\begin{frame}{Použití rsync nebo scp}
+\begin{itemize}
+	\item {\color{blue} \texttt{scp file.txt username@<r-system>:/remote/directory/newfile.txt}}
+	\item {\color{blue} \texttt{scp username@<r-system>:/remote/file.txt /local/directory/newfile.txt}}
+	\item \textbf{rsync} se chová podobně
+	\item Více v manuálových stránkách.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pomocí dpaste}
+Ve Fedoře se standardně nabízí \textbf{fpaste}, ale vrací ukrutně dlouhý hash -- \texttt{Kut1tUlXWJvpwI2QEcX5EA}. 
 
 \vspace{5pt}
 
-\textbf{dpaste} returns a four letter hash, which is fairly easy to remember -- \texttt{vWVF}.
+\textbf{dpaste} vrací pouze 4 znaky, což se daleko lépe pamatuje -- \texttt{vWVF}.
 
 \vspace{5pt}
 
-You can get \textbf{dpaste} from {\color{blue}\url{https://github.com/lruzicka/dpaste.git}}.
+\textbf{dpaste} je k dispozici z {\color{blue}\url{https://github.com/lruzicka/dpaste.git}}.
 
 \vspace{5pt}
 
-You can collect the paste from {\color{blue}\url{http://dpaste.de}}.
+A zkopírované snippety lze přečíst z {\color{blue}\url{http://dpaste.de}}.
 
 \end{frame}
 
-\section{Using Bugzilla}
-\begin{frame}{New at Bugzilla}
+\section{Používáme Bugzillu}
+\begin{frame}{Nově v Bugzille}
 \includegraphics[width=10cm]{images/bz_new.png}
 \end{frame}
 
-\begin{frame}{Logged into Bugzilla}
+\begin{frame}{Přihlášení do Bugzilly}
 \includegraphics[width=10cm]{images/bz_logged.png}
 \end{frame}
 
-\begin{frame}{Classify the bug}
+\begin{frame}{Klasifikace chyby}
 \includegraphics[width=10cm]{images/bz_classification.png}
 \end{frame}
 
-\begin{frame}{Choose the correct product}
+\begin{frame}{Výběr správného produktu}
 \includegraphics[width=10cm]{images/bz_product.png}
 \end{frame}
 
-\begin{frame}{File the bug (part 1)}
+\begin{frame}{Hlášení chyby (část 1)}
 \includegraphics[width=10cm]{images/bz_header.png}
 \end{frame}
 
-\begin{frame}{File the bug (part 2)}
+\begin{frame}{Hlášení chyby (část 2)}
 \includegraphics[width=10cm]{images/bz_description.png}
 \end{frame}
 
-\begin{frame}{Description of problem}
+\begin{frame}{Popis chyby}
 \begin{itemize}
-	\item What is the problem?
-	\item When does it appear?
-	\item How much does it affect work?
-	\item Why is it a problem?
-	\item others
+	\item Co je ze problém?
+	\item Kdy se objevuje?
+	\item Jak to ovlivňuje práci?
+	\item Proč je to problém?
+	\item další
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Version of selected component}
-Provide the version number of the problematic components and also of the affected components.
+\begin{frame}[fragile]{Verze komponenty}
+Napište verzi problematické komponenty a také verze dalších komponent, které mohou hrát roli.
 \begin{itemize}
-	\item {\color{blue}\textbf{About}} menu in GUI
-	\item {\color{blue}\texttt{-v}} or {\color{blue}{\verb|--version|}} option on CLI (or \texttt{man})
-	\item {\color{blue}\texttt{rpm -q}} for installed packages
-	\item {\color{blue}\texttt{dnf info}} for installed and available packages
+	\item {\color{blue}\textbf{About}} menu v GUI
+	\item {\color{blue}\texttt{-v}} nebo {\color{blue}{\verb|--version|}} volba na CLI (nebo \texttt{man})
+	\item {\color{blue}\texttt{rpm -q}} pro verze instalovaných balíčků
+	\item {\color{blue}\texttt{dnf info}} pro instalované a dostupné balíčky
 \end{itemize}
 \end{frame}
 
-\begin{frame}{How reproducible}
+\begin{frame}{Jak reprodukovatelné}
 \begin{itemize}
 	\item Always
-	\item Sometimes -- specify when exactly
-	\item Under certain conditions -- describe them
+	\item Sometimes -- kdy přesně?
+	\item Za určitých podmínek -- popište je
 	\item Heisenbug 
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Steps to reproduce}
-Procedure that leads to reproducing the bug.
+\begin{frame}{Kroky vedoucí k chybě}
+Co musím udělat, aby se chyba projevila?
 \begin{itemize}
-	\item One activity in one step.
-	\item Do not skip steps, even if you think the step is obvious.
-	\item Pay attention to details.
-	\item Be exact.
+	\item Jedna činnost v jednom kroku.
+	\item Nepřeskakujte kroky, byť se zdají být zjevné.
+	\item Pozor na detaily.
+	\item Buďte přesní.
 \end{itemize}
-Others want to see that bug, too. 
+Ostatní ten bug chtějí taky vidět.
 \end{frame}
 
-\begin{frame}{Results}
+\begin{frame}{Výsledek}
 \begin{description}
-	\item[Actual] -- what is the result of the current behaviour
-	\item[Expected] -- how you think the system should behave
+	\item[Actual] -- co to dělá?
+	\item[Expected] -- co si myslíte, že by to mělo dělat?
 \end{description}
 \end{frame}
 
-\begin{frame}{File the bug (part 3)}
+\begin{frame}{Hlášení chyby (část 3)}
 \includegraphics[width=10cm]{images/bz_footer.png}
 \end{frame}
 
-\begin{frame}{No clue about anything?}
+\begin{frame}{Nemáte ani páru, co se děje?}
 
-{\Large File the bug anyway!}
+{\Large Nahlašte to i tak!}
 \end{frame}
 
-\section{Questions}
+\section{Otázky}
 
 \begin{frame}{Q\&A}
 
-{\Large A lame tongue gets nothing.}
+{\Large Znáte to, o té líné hubě?}
 \end{frame}
 
 \end{document}

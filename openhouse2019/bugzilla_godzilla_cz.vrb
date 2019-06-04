@@ -1,8 +1,8 @@
-\frametitle{Version of selected component}
-Provide the version number of the problematic components and also of the affected components.
+\frametitle{Verze komponenty}
+Napište verzi problematické komponenty a také verze dalších komponent, které mohou hrát roli.
 \begin{itemize}
-	\item {\color{blue}\textbf{About}} menu in GUI
-	\item {\color{blue}\texttt{-v}} or {\color{blue}{\verb|--version|}} option on CLI (or \texttt{man})
-	\item {\color{blue}\texttt{rpm -q}} for installed packages
-	\item {\color{blue}\texttt{dnf info}} for installed and available packages
+	\item {\color{blue}\textbf{About}} menu v GUI
+	\item {\color{blue}\texttt{-v}} nebo {\color{blue}{\verb|--version|}} volba na CLI (nebo \texttt{man})
+	\item {\color{blue}\texttt{rpm -q}} pro verze instalovaných balíčků
+	\item {\color{blue}\texttt{dnf info}} pro instalované a dostupné balíčky
 \end{itemize}
