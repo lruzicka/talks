@@ -1,0 +1,199 @@
+\documentclass[12pt,aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+\usepackage{lmodern}
+%\usetheme{Malmoe}
+\usetheme{Fedora169}
+\usepackage{graphicx}
+\usepackage{newverbs}
+
+\newverbcommand{\tc}{\color{blue}}{}
+
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{./images/background.jpg}}
+
+\begin{document}
+	\author{Lukáš Růžička (lruzicka@redhat.com)}
+	\title{Validujeme a akceptujeme Fedoru}
+	%\subtitle{Máňa říkala, že to není směroplatné}
+	\titlegraphic{\includegraphics[height=2cm]{buggie.png}}
+	\institute{Fedora QE}
+	\date{}
+%	\subject{Fedora 29}
+	%\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+
+\begin{frame}[plain]
+	\maketitle 
+\end{frame}
+
+\section{Úvod}
+
+\begin{frame}{Validační a akceptační testy}
+
+Validační testy a akceptační testy ve Fedoře:
+
+\vspace{15pt}
+
+\begin{itemize}
+\item probíhají podle \textit{plánu validačních testů} (Release validation test plan)
+\item testují \textit{kritéria kvality vydání} (Fedora Release Criteria)
+\item z části automatizované (OpenQA, Autocloud)
+\item z části manuální (fyzické i virtuální stroje)
+\item testují každé sestavení Fedory (nightly validation)
+\item a také předfinální sestavení (candidate compose)
+\item skládají se z jednotlivých testů (test case)
+\item výsledky se zapisují do výsledkových matic (Wikitcms)
+\end{itemize}
+
+\vspace{15pt}
+
+{\small \url{https://fedoraproject.org/wiki/QA:Release_validation_test_plan}}
+\end{frame}
+
+\begin{frame}{Oblasti priority}
+	
+	\begin{itemize}
+		\item instalace
+		\item základní systém
+		\item desktop
+		\item server
+		\item cloud
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Variace}
+	
+	\begin{itemize}
+		\item různá instalační média
+		\item architektura počítače
+		\item fyzicky nebo virtuálně
+		\item stávající nebo předchozí vydání
+		\item bios nebo uefi
+		\item blokující nebo neblokující
+		\item povinné či nepovinné
+		\item Losnu nebo Mažňáka
+		\item a mnoho dalších
+	\end{itemize}
+
+\vspace{10pt}
+
+Vzhledem k mnoha faktorům je nutné testovat \textbf{často a hodně}. 
+\end{frame}
+
+\begin{frame}{Milníky}
+	\begin{itemize}
+	\item základní (alfa)
+	\item beta
+	\item finální
+	\item následující zahrnuje předcházející
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Kritéria kvality}
+	
+	\begin{itemize}
+		\item co musí vydání (nebo sestavení) splňovat
+		\item co se má kdy testovat
+		\item jaké jsou priority
+		\item jak závažné jsou nalezené chyby
+		\item stupně kvality dle fází vývoje -- \textit{základní}, \textit{beta} a \textit{finální} kritéria
+	\end{itemize}
+	
+	\vspace{10pt}
+	
+	{\small \url{https://fedoraproject.org/wiki/Fedora_Release_Criteria}}
+\end{frame}
+
+\begin{frame}{Testy}
+	\begin{itemize}
+		\item definice kritéria kvality
+		\item popis
+		\item nastavení prostředí
+		\item provedení testu
+		\item očekávané výsledky
+	\end{itemize}
+
+	\vspace{10pt}
+
+{\small \url{https://fedoraproject.org/wiki/QA:Testcase_upgrade_dnf_previous_workstation}}
+\end{frame}
+
+\begin{frame}{Blokující}
+	Je-li test neúspěšný, tak automaticky zdržuje vydání Fedory až do vyřešení (pokud není rozhodnuto jinak)
+		
+	\vspace{10pt}
+	
+	\begin{itemize}
+		\item Workstation, Server, Cloud, KDE (x86\_64)
+		\item Minimal, Xfce (arm)
+		\item \textit{basic}, \textit{beta}, \textit{final}
+		\item \textit{optional} nejsou blokující
+		\item BlockerBug Process
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Výsledky}
+	\begin{itemize}
+		\item zapisují se do výsledkových \textit{matic}
+		\item \textit{inprogress}, \textit{pass}, \textit{fail}
+		\item bug, poznámka
+		\item robotický tester \textbf{coconut}
+	\end{itemize}
+
+	\vspace{10pt}
+
+{\small \url{https://fedoraproject.org/wiki/Test_Results:Fedora_32_Rawhide_20191115.n.0_Installation?rd=Test_Results:Current_Installation_Test}}
+\end{frame}
+
+\begin{frame}{Připraveno k vydání}
+	
+	Fedora se považuje z hlediska QA za vhodnou k vydání:
+	
+	\vspace{10pt}
+	
+	\begin{itemize}
+		\item všechny blokující testy z matic jsou \textbf{pass}
+		\item nebyly nalezeny jiné chyby v rozporu s kritérii
+	\end{itemize}
+
+	\vspace{10pt}
+
+	Vše ostatní nehraje roli.
+\end{frame}
+
+\begin{frame}{Rizika}
+	
+	\begin{itemize}
+		\item jeden neměnný postup (coconut)
+		\item omezený hardware (ThinkPad)
+		\item virtuální stroje převažují nad fyzickými
+		\item pouze minimální rozsah některých testů
+		\item nedostatek zdrojů celkově
+		\item malá otestovanost neblokujících součástí Fedory
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Testujte s námi}
+	
+	\begin{itemize}
+		\item používejte Fedoru už od beta verze
+		\item používejte oblíbený desktop a aplikace
+		\item aplikujte na chyby kritéria kvality
+		\item testujte i neblokující testy
+		\item testujte i to, co už bylo otestováno
+		\item nebojte se nás kontakovat s připomínkami a návrhy
+		\item stavte se na \textit{\#fedora-qa} (freenode)
+		\item hlašte \textit{BlockerBugs} a hlasujte o nich
+		\item \textbf{coconut} je sice pracovitý, ale nemá žádnou fantazii
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Konec?}
+
+Pokud máte nějaké otázky, \textbf{ptejte se}. Jinak děkuji za pozornost.
+
+\end{frame}
+
+
+\end{document}
