@@ -132,10 +132,13 @@
 	error: failed to push some refs to 
 	'https://github.com/dokumentarista/trygit.git'
 	hint: Updates were rejected because the remote 
-	hint: contains work that you donot have locally. 
+	hint: contains work that you do
+not have locally. 
 	hint: This is usually caused by another repository 
-	hint: pushingto the same ref. You may want to first 
-	hint: integrate the remote changes(e.g., 'git pull ...')
+	hint: pushing
+to the same ref. You may want to first 
+	hint: integrate the remote changes
+(e.g., 'git pull ...')
 	hint: before pushing again.
 	hint: See the 'Note about fast-forwards' for details.
 	\end{verbatim}
@@ -308,7 +311,7 @@
 \begin{frame}{Undo local changes -- reset}
 	\begin{itemize}
 		\item You can reset the HEAD to a previous commit.
-		\item You can either use hashes or \texttt{HEAD~n}
+		\item You can either use hashes or \texttt{HEAD$\sim$3}
 		\item You can use \textbf{soft}, \textbf{mixed} or \textbf{hard} reset.
 		\item Default is mixed -- it changes the HEAD marker and unstages files, but leaves them untouched.
 		\item Hard reset will delete your files -- think twice.
@@ -321,7 +324,7 @@
 \begin{frame}{Undo local changes -- revert}
 	\begin{itemize}
 		\item You can revert to a previous commit.
-		\item You can either use hashes or \texttt{HEAD~n}
+		\item You can either use hashes or \texttt{HEAD$\sim$3}
 		\item A new commit will be added, that undoes the changes.
 		\item The operation does not go back in history, can be forwarded.
 		\item All changes can be recovered any time locally.
