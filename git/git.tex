@@ -303,14 +303,35 @@ to the same ref. You may want to first
 	\end{enumerate}
 	\end{frame}
 
+	\begin{frame}{What if I don't have access to repository?}
+	\begin{itemize}
+		\item Very common in open source world
+		\item Send patch via email?
+	\end{itemize}
+	\end{frame}
 
- \begin{frame}{What is a fork?}
- 	TBD
- \end{frame}
-
-\begin{frame}{How to work in a branch?}
-	TBD
-\end{frame}
+	\begin{frame}{Fork workflow}
+	\begin{itemize}
+		\item Fork a repository
+		\item Clone a repository
+	        \begin{itemize}
+		    \item \texttt{git clone <repo-address> <directory>}
+	        \end{itemize}
+		\item See remote repositories
+	        \begin{itemize}
+		    \item \texttt{git remote -v}
+	        \end{itemize}
+		\item Add the other remote repository
+	        \begin{itemize}
+		    \item \texttt{git remote add <name> <repo-address>}
+	        \end{itemize}
+		\item Make changes and push them to your fork
+	        \begin{itemize}
+		    \item \texttt{git push --set-upstream <remote> <branch>}
+	        \end{itemize}
+		\item Make pull request
+	\end{itemize}
+	\end{frame}
 
 	\begin{frame}{Changing the history -- interactive rebase}
 	\begin{itemize}
