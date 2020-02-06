@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{graphicx}
 \usetheme{Boadilla}
 
 \makeatletter
@@ -31,6 +32,45 @@
 		\item actively maintained
 		\item developed by Linus Torvalds
 		\item distributed 
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Installation}
+		\begin{itemize}
+		\item Fedora: sudo dnf install git
+		\item Debian: sudo apt-get install git
+		\item Mac: http://git-scm.com/download/mac
+		\item Windows: http://git-scm.com/download/win
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Configuration}
+		\begin{itemize}
+		\item \texttt{git config --global user.name "Your Name"}
+		\item \texttt{git config --global user.email "yourname@example.com"}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Basics}
+        \begin{center}
+	    \includegraphics[width=10cm]{commit} % some picture of dir->infex->repo
+        \end{center}
+		\begin{itemize}
+		\item[init] create new Git repository
+		\item[status] display the status quo of your local repository
+		\item[add] add changes to the staging area
+		\item[commit] save the changes into the tree
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Remote repository}
+        \begin{center}
+	    \includegraphics[width=10cm]{remote} % some picture of push/fetch/pull
+        \end{center}
+		\begin{itemize}
+		\item[push] send local changes to the server
+		\item[fetch] download newest changes from server
+		\item[pull] a shortcut for \textit{fetch} and \textit{merge} % too hard now?
 		\end{itemize}
 	\end{frame}
 
@@ -69,10 +109,7 @@
 
 	\begin{frame}{Clone the repository}
 	\begin{itemize}
-		\item creates a local copy of the repository
-		\item a new directory in your work directory
-		\item copies all data from the server into it
-		\item does \textbf{not} change the directory for you
+		\item creates a local copy of the repository in a new directory
 		\item \texttt{git clone <repo-address>}
 		\item \texttt{git clone <repo-address> <directory>}
 	\end{itemize}
@@ -80,34 +117,48 @@
 	\end{frame}
 
 	\begin{frame}{Task 1}
-	\begin{itemize}
+	\begin{enumerate}
 		\item As a group, fork repository \\ {\small \url{https://github.com/dokumentarista/trygit.git}}.
 		\item Set up commit rights for your members.
 		\item Clone the fork to your machine.
 		\item Go to that directory.
 		\item Display its content (\texttt{ls -a})
-	\end{itemize}
+	\end{enumerate}
 	
 	\end{frame}
 
 	\begin{frame}{Developing the project (adding changes)}
-		\begin{itemize}
+		\begin{enumerate}
 		\item open, edit, save files as you would normally do
-		\item see the new status (\texttt{git status})
-		\item add files you want git to start tracking (\texttt{git add})
-		\item save the changed files into the git tree \\ (\texttt{git commit -m "Explain why this."})
-		\item synchronize your git tree with the server version (\texttt{git push})
-		\end{itemize}
+		\item see the new status
+	        \begin{itemize}
+		    \item \texttt{git status}
+	        \end{itemize}
+		\item add files you want git to start tracking
+	        \begin{itemize}
+		    \item \texttt{git add}
+	        \end{itemize}
+		\item save the changed files into the git tree
+	        \begin{itemize}
+		    \item \texttt{git commit -m "Explain why"}
+	        \end{itemize}
+		\item synchronize your git tree with the server version
+	        \begin{itemize}
+		    \item \texttt{git push}
+	        \end{itemize}
+		\end{enumerate}
 	\end{frame}
 
 	\begin{frame}{Task 2}
-	\begin{itemize}
-		\item Although a group, work individually.
-		\item Open the \texttt{names.txt} file in the repo.
-		\item Add your name to the list of names.
-		\item Commit your changes.
-		\item Push them onto the server.
-	\end{itemize}
+	    \begin{itemize}
+		\item Although a group, work individually
+	    \end{itemize}
+	    \begin{enumerate}
+		\item Open the \texttt{names.txt} file in the repo
+		\item Add your name to the list of names
+		\item Commit your changes
+		\item Push them onto the server
+	    \end{enumerate}
 	\end{frame}
 
 	\begin{frame}{Getting the first conflict}
@@ -265,7 +316,7 @@ to the same ref. You may want to first
 
 
 	\begin{frame}{Task 3}
-	\begin{itemize}
+	\begin{enumerate}
 		\item Delete the repo files and clone it again.
 		\item Each person in the group creates their own branch.
 		\item Communicate with the team.
@@ -273,17 +324,38 @@ to the same ref. You may want to first
 		\item Merge or rebase the original branch onto your branch.
 		\item Fix conflicts.
 		\item Have it merged.
+	\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{What if I don't have access to repository?}
+	\begin{itemize}
+		\item Very common in open source world
+		\item Send patch via email?
 	\end{itemize}
 	\end{frame}
 
-
- \begin{frame}{What is a fork?}
- 	TBD
- \end{frame}
-
-\begin{frame}{How to work in a branch?}
-	TBD
-\end{frame}
+	\begin{frame}{Fork workflow}
+	\begin{itemize}
+		\item Fork a repository
+		\item Clone a repository
+	        \begin{itemize}
+		    \item \texttt{git clone <repo-address> <directory>}
+	        \end{itemize}
+		\item See remote repositories
+	        \begin{itemize}
+		    \item \texttt{git remote -v}
+	        \end{itemize}
+		\item Add the other remote repository
+	        \begin{itemize}
+		    \item \texttt{git remote add <name> <repo-address>}
+	        \end{itemize}
+		\item Make changes and push them to your fork
+	        \begin{itemize}
+		    \item \texttt{git push --set-upstream <remote> <branch>}
+	        \end{itemize}
+		\item Make pull request
+	\end{itemize}
+	\end{frame}
 
 	\begin{frame}{Changing the history -- interactive rebase}
 	\begin{itemize}
