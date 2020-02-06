@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{graphicx}
 \usetheme{Boadilla}
 
 \makeatletter
@@ -47,6 +48,29 @@
 		\begin{itemize}
 		\item \texttt{git config --global user.name "Your Name"}
 		\item \texttt{git config --global user.email "yourname@example.com"}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Basics}
+        \begin{center}
+	    \includegraphics[width=10cm]{commit} % some picture of dir->infex->repo
+        \end{center}
+		\begin{itemize}
+		\item[init] create new Git repository
+		\item[status] display the status quo of your local repository
+		\item[add] add changes to the staging area
+		\item[commit] save the changes into the tree
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Remote repository}
+        \begin{center}
+	    \includegraphics[width=10cm]{remote} % some picture of push/fetch/pull
+        \end{center}
+		\begin{itemize}
+		\item[push] send local changes to the server
+		\item[fetch] download newest changes from server
+		\item[pull] a shortcut for \textit{fetch} and \textit{merge} % too hard now?
 		\end{itemize}
 	\end{frame}
 
