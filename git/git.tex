@@ -17,13 +17,29 @@
 	%\subtitle{}
 	%\logo{}
 %	\institute{Red Hat}
-	%\date{}
+	\date{February 11th, 2020}
 	%\subject{}
 	%\setbeamercovered{transparent}
 	%\setbeamertemplate{navigation symbols}{}
 	\begin{frame}[plain]
 		\maketitle
 	\end{frame}
+
+	\begin{frame}{Why Git?}
+		What if I were to work on a project that would require various versions? 
+		
+		With \textbf{version control} I could:
+		
+		\vspace{5pt}
+		
+	\begin{itemize}
+		\item develop multiple versions
+		\item have a full history of changes
+		\item access previous versions
+		\item revert to a previous version
+		\item synchronize among multiple computers
+	\end{itemize}
+\end{frame}
 	
 	\begin{frame}{What is Git?}
 		\begin{itemize}
@@ -46,8 +62,8 @@
 
 	\begin{frame}{Configuration}
 		\begin{itemize}
-		\item \texttt{git config --global user.name "Your Name"}
-		\item \texttt{git config --global user.email "yourname@example.com"}
+		\item \texttt{git config -\,-global user.name "Your Name"}
+		\item \texttt{git config -\,-global user.email "yourname@example.com"}
 		\end{itemize}
 	\end{frame}
 
@@ -67,11 +83,10 @@
         \begin{center}
 	    \includegraphics[width=9cm]{remote.png}
         \end{center}
-    
 		\begin{description}
 		\item[push] send local changes to the server
 		\item[fetch] download newest changes from server
-		\item[pull] a shortcut for \textit{fetch} and \textit{merge} % too hard now?
+%		\item[pull] a shortcut for \textit{fetch} and \textit{merge} % too hard now?
 		\end{description}
 	\end{frame}
 
@@ -80,23 +95,37 @@
 		\item[clone] create a local copy of the repository
 		\item[fork] create a personal copy of the repository on the server 
 		\item[tree] a chronological map of changes
-		\item[branch] a development version
-		\item[commit] save the changes into the tree
-		\item[push] send local changes to the server
-		\item[fetch] download newest changes from server
+		\item[branch] a subtree (mostly used for development)
 	\end{description}
+	\end{frame}
+
+	\begin{frame}{Tree and Branches}
+    \begin{center}
+	\includegraphics[width=9cm]{tree.png}
+	\end{center}
 	\end{frame}
 
 	\begin{frame}{Terminology 2}
 	\begin{description}
-		\item[status] display the status quo of your local repository
 		\item[merge] merge two different branches together and keep chronological order
-		\item[rebase] put personal changes on top of other changes, does not keep chronological order
+		\item[rebase] put a branch on top of another
 		\item[pull] a shortcut for \textit{fetch} and \textit{merge}
 		\item[conflict] a problem that blocks merging of changes
 		\item[squash] put two (or more) commits into one
 		\item[blame] display the author of a change
 	\end{description}
+	\end{frame}
+
+	\begin{frame}{How does merging work?}
+	\begin{center}
+		\includegraphics[width=9cm]{merge.png}
+	\end{center}
+	\end{frame}
+
+	\begin{frame}{How does rebasing work?}
+	\begin{center}
+		\includegraphics[width=9cm]{rebase.png}
+	\end{center}
 	\end{frame}
 
 	\begin{frame}{Fork the repository}
@@ -151,9 +180,10 @@
 	\end{frame}
 
 	\begin{frame}{Task 2}
-	    \begin{itemize}
-		\item Although a group, work individually
-	    \end{itemize}
+	Although a group, work individually
+	
+	\vspace{5pt}
+
 	    \begin{enumerate}
 		\item Open the \texttt{names.txt} file in the repo
 		\item Add your name to the list of names
@@ -177,6 +207,13 @@
 	When in conflict, you cannot work with the remote repository because Git protects your data from being damaged.
 
 \end{frame}
+
+	\begin{frame}{When do I get a merge conflict?}
+	\begin{center}
+		\includegraphics[width=9cm]{conflict.png}
+	\end{center}
+	\end{frame}
+
 
 	\begin{frame}[fragile]{When you try to push}
 	\begin{verbatim}
@@ -263,9 +300,9 @@ to the same ref. You may want to first
 
 	\begin{frame}{How to limit conflicts?}
 	\begin{itemize}
-		\item Use the \textbf{branch} workflow.
-		\item Use the \textbf{fork} workflow.
-		\item Plan with your team.
+		\item Work in \textbf{branches}.
+		\item \textbf{Fork} the project and work in your version.
+		\item Plan ahead.
 		\item Communicate.
 	\end{itemize}
 
@@ -373,11 +410,20 @@ to the same ref. You may want to first
 	\begin{frame}{How to recover from interactive rebase?}
 	\begin{itemize}
 		\item Checkout the branch.
-		\item Fetch the new repo data (\texttt{git fetch origin})
-		\item Rebase your branch onto the original branch (\texttt{git rebase origin/master}).
+		\item Fetch the new repo data 
+		\begin{itemize}
+			\item \texttt{git fetch origin}
+		\end{itemize}
+		\item Rebase your branch onto the original branch.
+		\begin{itemize}
+			\item \texttt{git rebase origin/master}
+		\end{itemize}
 		\item All changes from your branch will appear on top of the original branch.
-		\item Alternatively, you can use \texttt{git pull -\,-rebase} which will do the rebase for you, if possible.
-		\item Merging the branch would never work, because the history has been changed.
+		\item Alternatively, you can use an option that will do the rebase for you, if possible.
+		\begin{itemize}
+			\item \texttt{git pull -\,-rebase}
+		\end{itemize}
+		\item \textbf{Merging the branch would never work}, because the history has been changed.
 	\end{itemize}
 \end{frame}
 
