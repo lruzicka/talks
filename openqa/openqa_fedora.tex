@@ -14,13 +14,10 @@
 
 \begin{document}
 	\author{Lukáš Růžička (lruzicka@redhat.com)}
-	\title{openQA for testing Fedora on Fedora}
-	%\subtitle{Máňa říkala, že to není směroplatné}
-	\titlegraphic{\includegraphics[height=2cm]{buggie.png}}
-	\institute{Fedora Quality Engineering}
-	\date{}
-%	\subject{Fedora 29}
-	%\setbeamercovered{transparent}
+	\title{OpenQA testing platform}
+	\subtitle{Train your own testing pet}
+	\institute{Fedora QE}
+	\date{April 2020}
 	\setbeamertemplate{navigation symbols}{}
 
 \begin{frame}[plain]
@@ -47,7 +44,7 @@
 It behaves similarly to a \textit{human} tester.
 \end{frame}
 
-\begin{frame}{Based on}
+\begin{frame}{Some technologies used}
 	
 	\begin{description}
 		\item[qemu] runs the machines
@@ -77,143 +74,166 @@ It behaves similarly to a \textit{human} tester.
 \end{frame}
 
 \begin{frame}{openQA architecture diagram}
-TBD: Diagram of the architecture
+	\begin{center}
+		\includegraphics[width=12cm]{architecture}
+	\end{center}
 \end{frame}
 
 \section{Concepts}
 
-\begin{frame}{Assets}
-
-
-	
+\begin{frame}{Basic concepts}
 	\begin{itemize}
-		\item co musí vydání (nebo sestavení) splňovat
-		\item co se má kdy testovat
-		\item jaké jsou priority
-		\item jak závažné jsou nalezené chyby
-		\item stupně kvality dle fází vývoje -- \textit{základní}, \textit{beta} a \textit{finální} kritéria
+		\item machine
+		\item tests grouping
+		\item image
+		\item job
+		\item test suite
+		\item test
+		\item needle
 	\end{itemize}
-	
-	\vspace{10pt}
-	
-	{\small \url{http://bit.ly/rcriteria}}
 \end{frame}
 
-\begin{frame}{Testy}
-	\begin{itemize}
-		\item definice kritéria kvality
-		\item popis
-		\item nastavení prostředí
-		\item provedení testu
-		\item očekávané výsledky
-	\end{itemize}
-
-	\vspace{10pt}
-
-{\small \url{http://bit.ly/testexample}}
+\begin{frame}[fragile]{Machine}
+	A \textbf{machine} is a qemu based virtual machine created with various settings. The following example shows the predefined \textbf{UEFI x86\_64} machine. 
+	
+	\vspace{5pt}
+	
+	\begin{verbatim}
+	ARCH_BASE_MACHINE=64bit
+	PART_TABLE_TYPE=gpt
+	QEMUCPU=Nehalem
+	QEMUCPUS=2
+	QEMURAM=2048
+	QEMUVGA=virtio
+	QEMU_VIRTIO_RNG=1
+	UEFI=1
+	UEFI_PFLASH_CODE=/usr/share/edk2/ovmf/OVMF_CODE.fd
+	UEFI_PFLASH_VARS=/usr/share/edk2/ovmf/OVMF_VARS.fd
+	WORKER_CLASS=qemu_x86_64
+	\end{verbatim}
+	
 \end{frame}
 
-\begin{frame}{Blokující}
-	Je-li test neúspěšný, tak automaticky zdržuje vydání Fedory až do vyřešení (pokud není rozhodnuto jinak)
+\begin{frame}[fragile]{Tests grouping}
+	Single tests can be organized into groups according to several criteria and different test groups can be run for different images.
+	\begin{description}
+		\item[distri] a collection of definitions, perl functions, methods, tests, and needles, that covers the entire testing programme, such as \verb|os-autoinst-distri-fedora|
+		\item[product] the main \textit{system under test} (SUT), such as \textbf{fedora} that is defined by a \textit{version}, \textit{flavor}, \textit{arch}, and has \textit{settings} assigned.
+		\item[version] one version of a product, such as \textbf{Rawhide} or \textbf{32}.
+		\item[flavor] a specific variant of a product to distinguish differing variants, e.g. \textbf{Workstation-live-iso}.
+		\item[arch] an architecture variant of a product, e.g. \textbf{x86\_64}.
+		\item[settings] variables to provide various settings, e.g. \verb|DESKTOP=gnome|.
+	\end{description}
+\end{frame}
+
+
+\begin{frame}[fragile]{Image}
+\textit{Images} are image files with the operating system to be tested. They are used to create and provide the virtual machines on which the actual tests are performed.
+
+\vspace{5pt}
+
+	\begin{itemize}
+		\item iso $\longrightarrow$ qcow2
+		\item qcow2
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Job}
+
+is one \textit{physical} run of a \textit{test case} or a \textit{test suite}, defined as: \\
+\textbf{{\tiny fedora-Rawhide-KDE-live-iso-x86\_64-BuildFedora-Rawhide-20200329.n.0-base\_service\_manipulation@64bit}}
+ \vspace{5pt}
+	
+	\begin{itemize}
+		\item product $\longrightarrow$ fedora
+		\item version $\longrightarrow$ Rawhide
+		\item flavor $\longrightarrow$ KDE-live-iso
+		\item arch $\longrightarrow$ x86\_64
+		\item build $\longrightarrow$ BuildFedora-Rawhide-20200329.n.0
+		\item test suite $\longrightarrow$ base\_service\_manipulation
+		\item machine $\longrightarrow$ 64bit
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Test Suite}
+
+	a collection of several test cases that follow one another and together make sense, for example the \textbf{install\_default\_upload} test suite:	
+
+	\vspace{5pt}
+	
+	\begin{enumerate}
+		\item  \_boot\_to\_anaconda
+		\item \_software\_selection
+		\item disk\_guided\_empty
+		\item \_do\_install\_and\_reboot
+		\item \_graphical\_wait\_login
+		\item \_collect\_data
+		\item \_console\_shutdown
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{A WebUI look on a test suite (job)}
+	\begin{center}
+		\includegraphics[width=12cm]{suite}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Test}
+ 	A \textbf{test} is a Perl script that defines what to do with the running virtual machine content and what to expect. 
+ 	
+ 	It mainly:
+ 	
+ 	\vspace{5pt}
 		
-	\vspace{10pt}
+	\begin{itemize}
+		\item defines mouse actions
+		\item defines keyboard actions
+		\item checks and evaluates needles
+		\item evaluates script outcomes
+	\end{itemize}
+
+	\vspace{5pt}
+	
+	The test (job) can have various \textit{statuses}, such as \textbf{passed}, \textbf{failed}, \textbf{softfailed}, \textbf{cancelled}, \textbf{running}, or \textbf{none}, etc.
+\end{frame}
+
+\begin{frame}[fragile]{Test example (Desktop Printing)}
+	\begin{verbatim}
+		# Open the text editor and print the file.
+		wait_screen_change { send_key "alt-f2"; };
+		wait_still_screen(stilltime=>5, similarity_level=>45);
+		type_very_safely "$editor /home/test/testfile.txt\n";
+		wait_still_screen(stilltime=>5, similarity_level=>44);
+		
+		# Print the file using the Cups-PDF printer
+		send_key "ctrl-p";
+		wait_still_screen(stilltime=>5, similarity_level=>45);
+		if ($desktop eq 'gnome') {
+		    assert_and_click "printing_select_pdfprinter";
+		}
+		else {
+		    assert_screen "printing_pdfprinter_ready";
+		}
+	\end{verbatim}
+\end{frame}
+
+\begin{frame}{Needle}
+	A \textbf{test} is a Perl script that defines what to do with the running virtual machine content and what to expect. 
+	
+	It mainly:
+	
+	\vspace{5pt}
 	
 	\begin{itemize}
-		\item Workstation, Server, Cloud, KDE (x86\_64)
-		\item Minimal, Xfce (arm)
-		\item \textit{basic}, \textit{beta}, \textit{final}
-		\item \textit{optional} nejsou blokující
-		\item BlockerBug Process
+		\item defines mouse actions
+		\item defines keyboard actions
+		\item checks and evaluates needles
+		\item evaluates script outcomes
 	\end{itemize}
-\end{frame}
-
-\begin{frame}{Výsledky}
-	\begin{itemize}
-		\item zapisují se do výsledkových \textit{matic}
-		\item \textit{inprogress}, \textit{pass}, \textit{fail}
-		\item bug, poznámka
-		\item robotický tester \textbf{coconut}
-	\end{itemize}
-
-	\vspace{10pt}
-
-{\small \url{http://bit.ly/examplematrix}}
-\end{frame}
-
-\begin{frame}{Připraveno k vydání}
 	
-	Fedora se považuje z hlediska QA za vhodnou k vydání:
+	\vspace{5pt}
 	
-	\vspace{10pt}
-	
-	\begin{itemize}
-		\item všechny blokující testy z matic jsou \textbf{pass}
-		\item nebyly nalezeny jiné chyby v rozporu s kritérii
-	\end{itemize}
-
-	\vspace{10pt}
-
-	Vše ostatní nehraje roli.
+	The test (job) can have various \textit{statuses}, such as \textbf{passed}, \textbf{failed}, \textbf{softfailed}, \textbf{cancelled}, \textbf{running}, or \textbf{none}, etc.
 \end{frame}
-
-\begin{frame}{Rizika}
-	
-	\begin{itemize}
-		\item jeden neměnný postup (coconut)
-		\item omezený hardware (ThinkPad)
-		\item virtuální stroje převažují nad fyzickými
-		\item pouze minimální rozsah některých testů
-		\item nedostatek zdrojů celkově
-		\item malá otestovanost neblokujících součástí Fedory
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Statistika F31}
-	Beta:
-	\begin{itemize}
-		\item 16 testerů
-		\item celkem 562 testů
-		\item nejaktivnější tester -- 233 testů
-		\item průměrně 35 testů
-	\end{itemize}
-	Finální:
-	\begin{itemize}
-		\item 13 testerů
-		\item celkem 431 testů
-		\item nejaktivnější tester -- 93 testů
-		\item průměrně 33 testů
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Testujte s námi}
-		\begin{itemize}
-		\item používejte Fedoru už od beta verze
-		\item používejte oblíbený desktop a aplikace
-		\item aplikujte na chyby kritéria kvality
-		\item testujte i neblokující testy
-		\item testujte i to, co už bylo otestováno
-		\item nebojte se nás kontakovat s připomínkami a návrhy
-		\item stavte se na \textit{\#fedora-qa} (freenode)
-		\item hlašte \textit{BlockerBugs} a hlasujte o nich
-		\item \textbf{coconut} je sice pracovitý, ale nemá žádnou fantazii
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Kde začít?}
-	
-{\Large \url{bit.ly/rvtestplan}}
-
-\vspace{10pt}
-	
-({\small \url{https://fedoraproject.org/wiki/QA:Release_validation_test_plan}})
-
-\end{frame}
-
-\begin{frame}{Konec?}
-
-Pokud máte nějaké otázky, \textbf{ptejte se}. Jinak děkuji za pozornost.
-
-\end{frame}
-
 
 \end{document}
