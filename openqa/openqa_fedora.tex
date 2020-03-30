@@ -14,10 +14,10 @@
 
 \begin{document}
 	\author{Lukáš Růžička (lruzicka@redhat.com)}
-	\title{Validujeme a akceptujeme Fedoru}
+	\title{openQA for testing Fedora on Fedora}
 	%\subtitle{Máňa říkala, že to není směroplatné}
 	\titlegraphic{\includegraphics[height=2cm]{buggie.png}}
-	\institute{Fedora QE}
+	\institute{Fedora Quality Engineering}
 	\date{}
 %	\subject{Fedora 29}
 	%\setbeamercovered{transparent}
@@ -27,70 +27,64 @@
 	\maketitle 
 \end{frame}
 
-\section{Úvod}
+\section{What is openQA}
 
-\begin{frame}{Validační a akceptační testy}
+\begin{frame}{What is openQA?}
 
-Validační testy a akceptační testy ve Fedoře:
+\textbf{openQA} is an automated test tool, developed by SuSE, that allows to test various features of operating systems using the \textit{hands-on} approach:
 
 \vspace{15pt}
 
 \begin{itemize}
-\item probíhají podle \textit{plánu validačních testů} (Release validation test plan)
-\item testují \textit{kritéria kvality vydání} (Fedora Release Criteria)
-\item z části automatizované (OpenQA, Autocloud)
-\item z části manuální (fyzické i virtuální stroje)
-\item testují každé sestavení Fedory (nightly validation)
-\item a také předfinální sestavení (candidate compose)
-\item skládají se z jednotlivých testů (test case)
-\item výsledky se zapisují do výsledkových matic (Wikitcms)
+\item it runs the operating system
+\item it provides an interface (console, GUI)
+\item it takes input, passes it to the machine and triggers actions
+\item it evaluates the reactions
 \end{itemize}
 
 \vspace{15pt}
 
-{\small \url{http://bit.ly/rvtestplan}}
+It behaves similarly to a \textit{human} tester.
 \end{frame}
 
-\begin{frame}{Oblasti priority}
+\begin{frame}{Based on}
 	
-	\begin{itemize}
-		\item instalace
-		\item základní systém
-		\item desktop
-		\item server
-		\item cloud
-	\end{itemize}
+	\begin{description}
+		\item[qemu] runs the machines
+		\item[VNC] provides the screens
+		\item[perl scripts] define actions and evaluations
+	\end{description}
 \end{frame}
 
-\begin{frame}{Variace}
-	
-	\begin{itemize}
-		\item různá instalační média
-		\item architektura počítače
-		\item fyzicky nebo virtuálně
-		\item stávající nebo předchozí vydání
-		\item bios nebo uefi
-		\item blokující nebo neblokující
-		\item povinné či nepovinné
-		\item Losnu nebo Mažňáka
-		\item a mnoho dalších
-	\end{itemize}
-
-\vspace{10pt}
-
-Vzhledem k mnoha faktorům je nutné testovat \textbf{často a hodně}. 
+\begin{frame}{openQA architecture}
+	\begin{description}
+		\item[Controller]
+			\begin{itemize}
+				\item Web UI (control and visualization)
+				\item job handling (scheduling, starting, stopping)
+				\item live viewing and interaction (monitoring and development)
+				\item results
+				\item database (postgresql)
+			\end{itemize}
+		\item[Worker]
+			\begin{itemize}
+				\item assets (iso or qcow2)
+				\item tests and needles 
+				\item syncing and caching 
+				\item video recording
+			\end{itemize}
+	\end{description}
 \end{frame}
 
-\begin{frame}{Milníky}
-	\begin{itemize}
-	\item základní (alfa)
-	\item beta
-	\item finální
-	\item následující zahrnuje předcházející
-\end{itemize}
+\begin{frame}{openQA architecture diagram}
+TBD: Diagram of the architecture
 \end{frame}
 
-\begin{frame}{Kritéria kvality}
+\section{Concepts}
+
+\begin{frame}{Assets}
+
+
 	
 	\begin{itemize}
 		\item co musí vydání (nebo sestavení) splňovat
