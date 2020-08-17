@@ -1,0 +1,69 @@
+\documentclass[14pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usetheme{Bergen}
+\begin{document}
+	\author{Lukáš Růžička}
+	\title{Pi\~na Colada with AutoCoconut}
+	%\subtitle{}
+	%\logo{}
+	%\institute{}
+	%\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{What is AutoCoconut?}
+		
+		\textbf{AutoCoconut} is a mouse and keyboard events logging and screenshots taking application that helps to easily record a~certain \textbf{workflow}.
+	\end{frame} 
+
+\begin{frame}
+	\frametitle{How does it work?}
+	The application $\ldots$
+	\begin{enumerate}
+		\item runs in the background
+		\item records mouse and key events, takes screenshots
+		\item saves all such information in a json file (raw)
+		\item interprets the recorded data
+		\item wraps them into a file for output (json, adoc, html, openqa)
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Parts of the application}
+	
+	\begin{itemize}
+		\item \texttt{event\_handler.py}
+		\item \texttt{screenshot\_grabber.py}
+		\item \texttt{interpreter.py}
+		\item \texttt{translator.py}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{event\_handler.py}
+	\begin{itemize}
+	\item uses \texttt{pynput} to monitor the input
+ 	\item records each single event (mouse and key)
+	\item classifies keys into groups (alphanumeric, special, modifiers)
+	\item matches events and screenshots
+	\item creates a json file with ``raw'' events
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+\end{frame}
+\end{document}
