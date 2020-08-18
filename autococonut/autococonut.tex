@@ -13,7 +13,7 @@
 	%\date{}
 	%\subject{}
 	%\setbeamercovered{transparent}
-	%\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{navigation symbols}{}
 	\begin{frame}[plain]
 		\maketitle
 	\end{frame}
@@ -40,6 +40,7 @@
 	\frametitle{Parts of the application}
 	
 	\begin{itemize}
+		\item \texttt{autococonut.py}		
 		\item \texttt{event\_handler.py}
 		\item \texttt{screenshot\_grabber.py}
 		\item \texttt{interpreter.py}
@@ -59,11 +60,156 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{}
+\begin{frame}[fragile]
+	\frametitle{The `raw' json format}
+	\begin{verbatim}
+		"1597741812.6215603": {
+		    "type": "mouse",
+		    "action": "click",
+		    "button": "left",
+		    "coordinates": [1805,1418],
+		    "screens": [
+		        "1597741812.6215603.png",
+		        "1597741811.6215603.png"]
+		},
+	\end{verbatim}
+
 \end{frame}
 
 \begin{frame}
-	\frametitle{}
+	\frametitle{interpreter.py}
+	\begin{itemize}
+		\item iterates over the `raw' json file
+		\item searches for patterns
+		\item converts `raw` events into \textbf{super events}
+		\item creates a new json with super events
+	\end{itemize}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Interpreter super events}
+	\begin{itemize}
+		\item click and double click
+		\item scroll and drag
+		\item typing
+		\item special keys
+		\item key combinations
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{The super events json file}
+		\begin{verbatim}
+	"1597745423.9703004": {
+	    "type": "typing",
+	    "subtype": "text",
+	    "action": "type",
+	    "key": "o",
+	    "screens": [null,null],
+	    "combined": null,
+	    "text": "useradd pkolinko",
+	    "reason": "special key pressed"
+	},
+	\end{verbatim}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{translator.py}
+	\begin{itemize}
+	\item iterates over the super events json file
+	\item retouches some of the events to comply with the selected output
+	\item creates overlays for the screenshots
+	\item creates needle json files for OpenQA output
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{autococonut.py}
+	\begin{itemize}
+	\item runs the application
+	\item deals with console arguments
+	\item produces output 
+	\item uses the \textbf{Killer Ninja} templates\footnote{I know they are called \textit{Jinja}.} to produce selected output.
+\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Possible output (currently)}
+		\begin{itemize}
+		\item raw json
+		\item super events json
+		\item Asciidoc file
+		\item HTML file
+		\item OpenQA test subroutine
+		\item possibly more
+		\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{How to use it?}
+	\begin{enumerate}
+		\item run the script
+		\item prepare your workplace
+		\item press the \textbf{stop key} to start listening
+		\item do your workflow
+		\item press the stop key to stop listening
+		\item get the results
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Useful CLI options 1}
+	\begin{description}
+		\item[{\color{blue}-\,-stopkey}] a dedicated key to start and stop listening (F10)
+		\item[{\color{blue}-\,-offset}] a time offset in seconds to delay or precede the screenshots (1)
+		\item[{\color{blue}-\,-caption}] the title of the output document (AutoCoconut -- workflow report)
+	\end{description}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Useful CLI options 2}
+	\begin{description}
+		\item[{\color{blue}-\,-file}] the name of the output file and directory to save the screenshots (none)
+		\item[{\color{blue}-\,-output}] one of the possible outputs (adoc) 
+	\end{description}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Search for Audi A4}
+	\begin{itemize}
+		\item look for an available used A4
+		\item clicking, typing, special keys
+		\item asciidoc output
+		\item overlain screenshots
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Add to Gnome Calendar}
+	\begin{itemize}
+	\item add an event into the Gnome Calendar
+	\item clicking, typing, special keys, key combinations
+	\item openqa output
+	\item openqa needles
+	\item successfully tested in OpenQA
+\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Test basic calculations}
+	\begin{itemize}
+		\item test basic operations
+		\item mouse clicking, special keys
+		\item openqa output
+		\item openqa needles
+		\item successfully tested in OpenQA
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Q\&A}
+	Speak now or forever hold your peace.
+\end{frame}
+
 \end{document}

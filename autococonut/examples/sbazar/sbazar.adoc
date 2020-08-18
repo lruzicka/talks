@@ -1,0 +1,138 @@
+= AutoCoconut - workflow report
+
+
+
+
+. Click with the *left* button at coordinates *(447, 195)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step1-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(455, 181)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step2-needle.png[]
+
+
+
+. Type *audi a4*.
+
+
+
+
+. Press *down*. See the screenshot for the result of the action. 
++
+image::step4-needle.png[]
+
+
+
+
+. Press *down*. See the screenshot for the result of the action. 
++
+image::step5-needle.png[]
+
+
+
+
+. Press *down*. See the screenshot for the result of the action. 
++
+image::step6-needle.png[]
+
+
+
+
+. Press *enter*. See the screenshot for the result of the action. 
++
+image::step7-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(477, 938)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step8-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(780, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step9-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step10-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step11-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step12-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step13-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step14-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step15-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step16-needle.png[]
+
+
+
+
+. Click with the *left* button at coordinates *(779, 613)*. See the screenshot for the aproximate
+area of the click. 
++
+image::step17-needle.png[]
+
+
+
+. This is the end of the recording. See the screenshot that shows the situation at the end of the recording. 
++
+image::step18-needle.png[]
+
+
+
