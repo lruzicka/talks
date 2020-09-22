@@ -1,0 +1,266 @@
+\documentclass[11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[czech]{babel}
+\usetheme{metropolis}
+\begin{document}
+	\author{Lukáš Růžička}
+	\title{Svobodný software}
+	\subtitle{právo na svobodu počítačování}
+	%\logo{}
+	\institute{lruzicka@redhat.com}
+	\date{září 2020}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+
+	\begin{frame}{Právo na svobodu}
+		\begin{quote}
+			\textbf{Svoboda} je možnost, případně také schopnost, volit, rozhodovat a jednat \uv{podle své vůle}, ať je jakákoli a nést za to přiměřenou odpovědnost.\footnote{https://cs.wikipedia.org/wiki/Svoboda} 
+		\end{quote}
+	\end{frame}
+	
+	\begin{frame}{Důležitost svobody}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{quote}
+				Ten, kdo se ve jménu bezpečnosti vzdává svobody, nezaslouží si ani svobodu ani bezpečnost.
+			\end{quote}
+			\begin{flushright}
+				(Benjamin Franklin)
+			\end{flushright}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=5cm]{images/franklin.jpg}
+		\end{column}
+	\end{columns}
+	\end{frame}
+
+	\begin{frame}{Historické náhledy na software}
+		\begin{description}
+			\item[1950-60]
+			  \begin{itemize}
+			  	\item software jako předmět \textbf{výzkumu}
+			  	\item \textbf{otevřenost a spolupráce} mezi univerzitami a korporacemi
+			  	\item \textbf{monetizace nebyla} cílem
+			  	\item často šířen jako \textbf{veřejný statek} (public-domain)
+			  	\item \textbf{dostupný zdrojový kód}
+			  \end{itemize}
+		\end{description}
+	\end{frame}
+
+	\begin{frame}{Historické náhledy na software}
+	\begin{description}
+		\item[1961-70]
+		\begin{itemize}
+			\item \textbf{rozvoj} programovacích jazyků a kompilerů
+			\item \textbf{přibalený} (bundled) vs. samostatný software
+			\item rozvoj specializovaného softwaru nezávislého na hardware
+			\item neochota zákazníků \textbf{platit} za software \textbf{dvakrát}
+			\item soudní spor \textbf{USA vs. IBM (1969)} -- přibalování software poškozuje konkurenci
+			\item software poskytován s různými \textbf{omezeními}
+		\end{itemize}
+	\end{description}
+	\end{frame}
+
+	\begin{frame}{Historické náhledy na software}
+	\begin{description}
+		\item[1971-80]
+		\begin{itemize}
+			\item změna obchodních modelů -- např. OS zdarma, ale placené \uv{patche}
+			\item poprvé tzv. \textbf{vendor lock-in}
+			\item soudní rozhodnutí z roku 1974 uznalo software za \textbf{chránitelný copyrightem} (copyrightable)
+			\item software jako licencovaný produkt
+			\item \textbf{konec distribuce zdrojových kódů}, distribuován je pouze tzv. \textbf{strojový} (machine) kód
+			\item \textbf{patentová ochrana} softwarových řešení
+		\end{itemize}
+	\end{description}
+	\end{frame}
+
+	\begin{frame}{Historické náhledy na software}
+	\begin{description}
+		\item[1981-90]
+		\begin{itemize}
+			\item touha po původní myšlence \textbf{sdílení} však nadále existuje mezi \textbf{hobíky} a \textbf{hackery}
+			\item vznik online sdílených komunit (např. tzv. BBS)
+			\item Richard Stallman a vznik projektu \textbf{GNU} (1983)
+			\item \textbf{Free Software Manifesto} a vznik \textbf{Free Software Foundation} (1985)
+			\item GNU General Public License (1989)\footnote{Dneska již ve třetím vydání.}
+			\item jádro projektu GNU -- \textbf{Hurd}
+		\end{itemize}
+	\end{description}
+\end{frame}
+
+	\begin{frame}{Historické náhledy na software}
+	\begin{description}
+		\item[1991-dosud]
+		\begin{itemize}
+			\item jádro \textbf{Linux} (na bázi Minix) od Linuse Torvaldse pod licencí GPL
+			\item přidala se \textbf{komunita vývojářů} a projekt začal růst
+			\item spojení GNU projektu s linuxovým jádrem -- \textbf{GNU/Linux}
+			\item Debian -- důraz na principy FSF
+			\item některé \textbf{části} jádra \textbf{nesplňují} definici \textit{free software}
+			\item mnoho dalších distribucí a projektů založených na GNU/Linux
+		\end{itemize}
+	\end{description}
+\end{frame}
+	
+	
+	\begin{frame}{Co je Svobodný software?}
+		\textit{Svobodný software} je takový, který zaručuje svým uživatelům \textbf{čtyři základní svobody}.
+				\begin{itemize}
+			\item právo spouštět program, jak si přejete a za jakýmkoliv účelem
+			\item právo zkoumat, jak program funguje, a právo upravit si jej libovolně pro své účely (otevřený kód)
+			\item právo šířit kopie, abyste pomohli ostatním
+			\item právo šířit vámi modifikované verze programu a umožnit komunitě, aby těžila z vašich vylepšení (otevřený kód)
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Právo spouštět}
+		\begin{itemize}
+			\item uživatel smí program \textbf{spouštět za jakýmkoliv} účelem
+			\item není důležité, za jakým \textbf{účelem byl program vytvořen}
+			\item právo spouštět \textbf{nezakládá nároky na funkčnost} programu
+		\end{itemize}
+    \end{frame}	
+
+	\begin{frame}{Právo zkoumat a měnit}
+	\begin{itemize}
+		\item uživatel smí program studovat -- k tomu je nutné, aby měl tzv.~\textbf{otevřený kód} (open source).
+		\item uživatel si smí program upravit pro svou vlastní potřebu, jakožto i pro kohokoliv jiného a \textbf{není povinen žádat o svolení}
+		\item uživatel má právo volně spouštět \textbf{své vlastní modifikace programu}
+		\item uživatel má právo k programu připojovat další \textbf{svobodné knihovny, funkce, a moduly}
+	\end{itemize}
+	\end{frame}	
+
+	\begin{frame}{Právo šířit}
+	\begin{itemize}
+		\item uživatel má právo \textbf{šířit kopie programu zdarma nebo za úplatu} a nemusí nikoho žádat o svolení ani nikomu za toto právo platit
+		\item uživatel má právo program modifikovat \textbf{sám pro sebe nebo pro kohokoliv jiného}. Pokud změny zvěřejníte, nejste povinni toto nikomu hlásit
+		\item uživatel má právo \textbf{své vlastní modifikace} vydat pod jakoukoliv licencí (program přestane být \textit{free})
+		\item uživatel má právo distribuovat \textbf{zdrojové i binární} kopie programu.
+	\end{itemize}
+	\end{frame}	
+
+	\begin{frame}{Copyleft}
+	\textbf{Copyleft} je způsobem, jak zaručit všem svobodu a práva při používání programů.
+	\begin{itemize}
+		\item není opakem slova \textbf{Copyright}, naopak je postaven na \textbf{Copyrightu}.
+		\item nemá za účel zpochybnit autorství
+		\item vyžaduje, aby modifikace a redistribuce programu poskytovaly všechna práva, která program poskytoval předtím
+		\item dává volnost programátorům
+		\item chrání programy před \textbf{proprietarizací}
+		\item toto je zaručeno správnou licencí
+	\end{itemize}
+\end{frame}	
+	
+\begin{frame}{Licence vyhovující definici svobodného software}
+	\begin{itemize}
+		\item \textbf{GNU General Public License (GPL)}
+		\item GNU Lesser General Public License (LGPL)
+		\item Apache License 2.0
+		\item Berkely Database License
+		\item Modified BSD
+		\item Perl 5 License
+		\item X11 License
+		\item a mnoho dalších\footnote{https://www.gnu.org/licenses/license-list.html}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Problémy vyplývající z proprietární licence}
+	\begin{itemize}
+		\item náklady na pořízení
+		\item uživatelská podpora
+		\item zabezpečení
+		\item úprava podle přání zákazníka
+		\item vendor lock-in
+		\item možné odchýlení od standardů
+		\item softwarové patenty
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Náklady na pořízení}
+	\begin{itemize}
+		\item jednorázové (licence)
+		\item opakované (předplatné)
+		\item kombinované
+		\item riziko počítačového pirátství
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Uživatelská podpora}
+	\begin{itemize}
+		\item často zanedbávaná
+		\item mnohdy podfinancovaná
+		\item leckde outsourcing některých úrovní podpory
+		\item obtížně dostupná
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Zabezpečení}
+	\begin{itemize}
+		\item neprostá nemožnost zjistit, jak software s bezpečností zachází
+		\item riziko neobjevených chyb
+		\item riziko přeprodávání uživatelských dat třetím stranám
+		\item riziko ovlivňování chování uživatelů
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Úprava podle přání zákazníka}
+	neboli \textbf{customizace} (customization)
+	\begin{itemize}
+		\item nelze nechat zákaznicky upravit
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Vendor lock-in}
+	aneb \textbf{závislost zákazníka na produktu} a nemožnost úniku
+	
+	\begin{itemize}
+		\item firma se vybaví proprietárním řešením
+		\item po čase řešení přestane vyhovovat
+		\item data nejsou jednoduše přenositelná jinam
+		\item formát není dobře zdokumentován
+		\item migrace na jiný produkt finančně a časově náročná
+		\item kompatibilita mezi spolupracujícími firmami nejasná
+		\item pořízení nové verze, u které výrobce slibuje vyšší kvality
+		\item cyklus se opakuje
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Standardy}
+	\textbf{Standardy} definují přístup k řešení konkrétních IT problémů.
+ 	 	
+	\begin{itemize}
+		\item kompatibilita napříč počítačovým světem
+		\item svoboda volby
+	\end{itemize}
+	V proprietárních systémech nejsou často respektovány a to způsobuje mnoho problému.
+	\begin{itemize}
+		\item nerespektování $=$ konkurenční výhoda
+		\item bludný kruh pro uživatele (vendor lock-in)
+		\item nutnost synchronizace mezi uživateli
+		\item revolvingové náklady na používání
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Softwarové patenty}
+
+	
+	\begin{itemize}
+		\item chrání \textbf{duševní vlastnictví} autora
+		\item nutnost zakoupit licenci na jejich použití
+		\item 
+		\item formát není dobře zdokumentován
+		\item migrace na jiný produkt finančně a časově náročná
+		\item kompatibilita mezi spolupracujícími firmami nejasná
+		\item pořízení nové verze, u které výrobce slibuje vyšší kvality
+		\item cyklus se opakuje
+	\end{itemize}
+\end{frame}
+
+\end{document}
