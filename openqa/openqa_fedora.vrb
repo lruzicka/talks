@@ -1,0 +1,18 @@
+\frametitle{Test example}
+\begin{verbatim}
+		# Open the text editor and print the file.
+		wait_screen_change { send_key "alt-f2"; };
+		wait_still_screen(stilltime=>5, similarity_level=>45);
+		type_very_safely "$editor /home/test/testfile.txt\n";
+		wait_still_screen(stilltime=>5, similarity_level=>44);
+		
+		# Print the file using the Cups-PDF printer
+		send_key "ctrl-p";
+		wait_still_screen(stilltime=>5, similarity_level=>45);
+		if ($desktop eq 'gnome') {
+		    assert_and_click "printing_select_pdfprinter";
+		}
+		else {
+		    assert_screen "printing_pdfprinter_ready";
+		}
+	\end{verbatim}
