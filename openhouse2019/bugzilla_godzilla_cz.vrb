@@ -1,8 +1,0 @@
-\frametitle{Verze komponenty}
-Napište verzi problematické komponenty a také verze dalších komponent, které mohou hrát roli.
-\begin{itemize}
-	\item {\color{blue}\textbf{About}} menu v GUI
-	\item {\color{blue}\texttt{-v}} nebo {\color{blue}{\verb|--version|}} volba na CLI (nebo \texttt{man})
-	\item {\color{blue}\texttt{rpm -q}} pro verze instalovaných balíčků
-	\item {\color{blue}\texttt{dnf info}} pro instalované a dostupné balíčky
-\end{itemize}

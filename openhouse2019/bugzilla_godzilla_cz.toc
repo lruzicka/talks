@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{\IeC {\'U}vod}{2}{0}{1}
-\beamer@sectionintoc {2}{Hl\IeC {\'a}\IeC {\v s}en\IeC {\'\i } chyb}{4}{0}{2}
-\beamer@sectionintoc {3}{Sb\IeC {\v e}r informac\IeC {\'\i }}{10}{0}{3}
-\beamer@sectionintoc {4}{Pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}me Bugzillu}{17}{0}{4}
-\beamer@sectionintoc {5}{Ot\IeC {\'a}zky}{30}{0}{5}
